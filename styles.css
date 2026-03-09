@@ -58,7 +58,7 @@ font-size:14px;
 
 
 
-/* Accordion base */
+/* Accordion styling using <details>/<summary> */
 .accordion-item {
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -66,47 +66,35 @@ font-size:14px;
   overflow: hidden;
 }
 
-/* Hide checkboxes */
-.accordion-toggle {
-  display: none;
-}
-
-/* Label styles (clickable header) */
+/* Summary header */
 .accordion-label {
-  display: block;
+  cursor: pointer;
+  padding: 15px;
   background: #222;
   color: white;
-  padding: 15px;
-  cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
+  list-style: none;
 }
 
+/* Hover effect */
 .accordion-label:hover {
   background: #444;
 }
 
-/* Content container */
+/* Content styling */
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  background: #f4f4f4;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-}
-
-/* Show content when checkbox is checked */
-.accordion-toggle:checked + .accordion-label + .accordion-content {
-  max-height: 1000px; /* large enough to fit content */
   padding: 15px;
+  background: #f4f4f4;
+  margin: 0;
 }
 
-/* Optional: add a "+" / "-" indicator */
-.accordion-label::after {
-  content: " +";
-  float: right;
+/* Optional: Change summary background when open */
+details[open] > .accordion-label {
+  background: #444;
 }
 
-.accordion-toggle:checked + .accordion-label::after {
-  content: " −";
+/* Optional: Add plus/minus indicator */
+summary::marker {
+  font-size: 1.2em;
 }
