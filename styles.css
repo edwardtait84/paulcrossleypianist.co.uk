@@ -55,3 +55,58 @@ text-align:center;
 padding:20px;
 font-size:14px;
 }
+
+
+
+/* Accordion base */
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Hide checkboxes */
+.accordion-toggle {
+  display: none;
+}
+
+/* Label styles (clickable header) */
+.accordion-label {
+  display: block;
+  background: #222;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.accordion-label:hover {
+  background: #444;
+}
+
+/* Content container */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #f4f4f4;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+/* Show content when checkbox is checked */
+.accordion-toggle:checked + .accordion-label + .accordion-content {
+  max-height: 1000px; /* large enough to fit content */
+  padding: 15px;
+}
+
+/* Optional: add a "+" / "-" indicator */
+.accordion-label::after {
+  content: " +";
+  float: right;
+}
+
+.accordion-toggle:checked + .accordion-label::after {
+  content: " −";
+}
