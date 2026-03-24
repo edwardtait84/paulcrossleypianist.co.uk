@@ -39,15 +39,20 @@ padding:40px;
 }
 
 .gallery{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:40px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  padding:40px;
+  max-width:1200px;
+  margin:auto;
 }
 
 .gallery img{
-width:250px;
-border-radius:5px;
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
 }
 
 footer{
