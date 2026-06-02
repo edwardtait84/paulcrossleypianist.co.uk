@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>RAVEL COMPLETE PIANO MUSIC</h2>
+  <br><p>In that intimate circle of artistic friends to which Ravel belonged — Les Apaches — he was nicknamed Rara. This was, no doubt, derived from the first syllable of his name but, of course, it carried with it the most apt Latin connotations; did it also, I wonder, remind them, as it reminds me, of ‘Maestro Raro' the nickname that Schumann gave to himself to denote his integral artistic identity, Florestan and Eusebius held in perfect equilibrium? It has become a commonplace to talk of musical ‘split personality’ in the case of Schumann, increasingly, too, in the case of Liszt (Faust/Mephistopheles, Franciscan/Gypsy, and so on), and yet a detailed examination of the complex of attitudes that make up Ravel reveals a duality quite as pronounced as either. (Significantly, he venerated both the older masters, and their influence on him, particularly that of Liszt, is incalculable).</p>
+  <br><p>Ricardo Viñes, his friend from childhood, described Ravel aged 21 as “...very complicated, there being in him a mixture of Middle Ages Catholicism and satanic impiety, but also with a love of Art and Beauty which guide him and which make him react candidly.” That is but one way of characterising this fundamental antithesis — ‘light’/‘dark’, ‘Apollonian’/‘Dionysiac’, ‘Aesthetic’/‘Decadent’ would be equally appropriate antitheses, all of them in some way limited and limiting. What is really remarkable is not only Ravel’s ability to explore separate sides of his personality in individual works, but also the absolute necessity of holding both sides in equilibrium so that he almost invariably had two works on the go at the same time.</p>
+  <br><p>The parallel composition of the two Piano Concertos is a well-documented instance; less well-known is that he had such awful difficulty getting off the ground with the G major Concerto until the commission for the Left Hand Concerto came in, after which both of them proceeded quite smoothly. This is, however, just the final example of what emerges as a persistent need; also composed in tandem were Sonatine and Miroirs, and Ma Mère L'Oye and Gaspard de la nuit; fascinatingly, it appears that Le Tombeau de Couperin also had an "invisible companion" — in a letter to his friend Roland-Manuel dated 1.x.1914 he writes, “I’m beginning two series of piano pieces; first a French Suite and secondly, a Nuit Romantique full of spleen, with a hunt in hell, an accursed nun, etc....” All the biographers of Ravel tell us that his life’s work was littered with unfinished projects, some of them, like the opera on Hauptmann's La Cloche Engloutie, brought to a substantial degree of readiness before being abandoned. It's my hunch that these works were all "invisible companions’ of extant works in the oeuvre, a sort of necessary waste- product of his artistic refinery.</p>
+  <br><p>Much in the fashionable artistic currents of fin-de-siècle Paris in which Ravel grew up corresponded with the needs of his nature. He himself was in no doubt as to which camp he belonged, referring to himself in a letter of 1898 to Mme. de Saint-Marceaux as ’the little symbolist’. Ravel lived and breathed Symbolism; he was steeped in the works of Baudelaire, Mallarmé, Wilde; his first songs were settings of poems by Verlaine and Verhaeren; in fact, he seems to me in many ways the archetype of a Symbolist artist. The life, totally given over to art, was outwardly expressed in attitudes of dandyism that came quite naturally to him. The extreme forms of dress are there in the photos for all to see; we know that he took 50 shirts with him on his 1927 USA tour, and that his main concern at the premiere of L'Heure Espagnole was that he and his companion were the only ones not wearing the latest midnight-blue evening clothes. His friend the critic Emile Vuillermoz has left us a charming vignette in this comment on Histoires Naturelles. “Ravel’s friends were interested and amused to find in them the habitual inflections of the author reproduced with an amazing fidelity; when he delivered himself of one of those perfectly fashioned ideas which were his speciality, he would make a very characteristic gesture; slipping the back of his right hand quickly behind his back, he would do a sort of ironical pirouette, lower his eyelids to conceal the malicious twinkle and end his little speech abruptly with a falling fourth or fifth." There was a real ‘dark’ side to his life — this chain-smoking man, painfully self-conscious of his small stature, was prey to the blackest depressions which silenced him often for months on end. There is silence on the personal emotional front, no evidence whatsoever of personal attachment, even in our age of frank revelations no hint of anything. Like many a symbolist he imagined that the real world of action might, ought to, have something to offer: he was desperately anxious to get into the war — when he did he wrote to his war-time godmother. “I have never been brave. But there it is, I'm eager to have adventures. It has such a fascination that it becomes a necessity. What will I do, what will many do when the war is over...?” The answer was clear, because this ‘action-interlude’ also silenced him. So, with Ravel, even more than with most artists, the life of the imagination is the life.</p>
+  <br><p>Ravel’s works typify the two major strands of Symbolist thought which can be summed up in the terms ‘Decadent' and ‘Aesthetic’, the one concealing behind its symbols a world of ideas and emotions within the artist, the other suggesting, in its perfection of form, an ideal world towards which he aspires, Miroirs, Gaspard de la nuit, and the Concerto for the left hand belong to the former category, the other piano works to the latter.</p>
+  <br><p>“My aim is technical perfection”, declared Ravel, and his works are the products of unceasing technical exploration. He had an unerring gift of knowing exactly where to look for what he wanted. During the composition of L'Enfant et les Sortileges he wrote to Colette, “Would you like to have the cup and the old black Wedgwood teapot sing a ragtime? I must confess that the idea of making two negroes sing a ragtime in our ‘National Academy of Music’ fills me with joy. Note that the form — a single couplet with a refrain — is perfectly suited to the movement in this scene — complaints, recriminations, rage, pursuit", (my italics). Ravel has been accused by one commentator of ‘playboy jazziness’ and yet his attitude here, as everywhere, is quite the opposite of ‘playboy’ — his is a most ‘responsible’ art. The two sides of his output required different technical resources and influences; the ‘light’ works are organised on lucid, formal principles — the dance, sonata-form, prelude and fugue, all manner of ‘forms and ceremonies’; the ‘dark’ works are more inchoate — the dance is nowhere in sight (except in the sense that Scarbo is, in part, a Mephisto Waltz) — and it took him rather longer to evolve the means of expression for them. Ravel’s output seems not so small if one appreciates the extent to which he never repeated himself; new works required fresh resources to contain them. His greatest asset was to have possessed what Debussy, no less, described as “the most refined ear that has ever existed”. He discovered innumerable 'new’ chords — empirical, belonging to no system (he used to experiment by turning his back to the piano, or by scrabbling about with his fingers on old out-of-tune pianos to savour the quarter-tone dissonances) — Valses nobles et sentimentales and the Piano Trio alone contain enough new chords to have furnished most composers with material for a lifetime’s work! He was always ready to seize upon new resources. His use of jazz, for instance, is very interesting. I’ve seen it suggested that, like Picasso’s discovery of African masks, it was the exotic and barbaric quality of the Negro music that attracted him. I don’t think so: I think he found, particularly in the “Blues”, something already sophisticated, a very condensed form — emotionally, usually sardonic — and remember that Ravel often had ‘the blues’ very badly!</p>
+  <br><p>Whatever the techniques and influences, Ravel was able to transmute them into his own manner from the outset. The Sérénade grotesque (1893) which is his Op. 1, is supposed to have been influenced by Chabrier, though having been through my Chabrier, the connection escapes me. In its unrefined (i.e. probably not fully prepared for publication – it was only resurrected in 1975), bizarreness, it turns out sounding not quite like anybody else; it is a kind of very primitive version of Alborada del gracioso; as I was recording it, it reminded most people, in its quirkiness, of the Stravinsky of Petrushka.</p>
+  <br><p>Menuet antique (1895) has traces of Chabrier and was his first piece to be published — by Enoch, the publishers of Chabrier, I should mention at this point two textual emendations I have made in these performances. When Ravel orchestrated the Valses nobles et sentimentales he added a ’cello countermelody in the fourth valse which he later sanctioned for inclusion in the piano version and which I play; by the same token, his orchestration of Menuet antique, done as late as 1929, repeats not the first part of the Trio section but the second, to which is added a muted trumpet and trombone figure which I find totally irresistable, and have therefore not resisted!</p>
+  <br><p>Pavane pour une infante défunte (1899), despite its enduring appeal, found little favour with its composer. Evidently its grave poignancy and wonderfully memorable and beautiful melody were no substitute for what he saw as its formal shortcomings, and, again, its dependence on the style of Chabrier. I rather think he overestimated the influence of Chabrier in his music — the obvious influence here is, more to be expected, the Pavane of his teacher Gabriel Fauré. The title should not be translated, the words having been chosen for their sound alone.</p>
+  <br><p>Jeux d'eau (1901) is the first great Symbolist work for piano and, as such, inaugurates an entirely new style of keyboard writing. All the problems that beset Symbolist writers and painters — how to achieve unity of form and meaning, action and contemplation, movement and stillness — are handled with seemingly effortless command. The influence of Liszt is paramount, especially Les Jeux d'eaux á la Villa d'Este and Au bord d'une source; although Ravel tells us that the work is constructed out of two themes, like a sonata-movement, he has learned from Liszt how to produce a work of contemplation rather than argument, where the material is not developed but repeated with minute variations of decoration, harmony and texture, an accumulation of musical gestures which constantly reiterate and reinforce the essential inner theme of the piece. Technically, he was able to extend the ideas of Liszt by harnessing the greatly enhanced resonant properties of the modern grand piano to new sound concepts he had encountered at Paris Exhibitions, the sounds of oriental ethnic instruments with their precise attacks, indefinite ends, and added resonances. His friend and pupil, the composer Maurice Delage has put his finger on the fundamental difference from Liszt when he refers to the “eblouissement a-sentimental" of Jeux d’eau, something emphasised by the epigram by Henri de Régnier, disciple of Mallarmé, which heads the score: “Dieu fluvial riant de l’eau qui le chatouille” (River god laughing at the water as it tickles him).The technical innovations that produced this combination of movement and stasis, of which a fountain is the perfect image, were not lost on Debussy: armed with its example and that of Ravel’s then unpublished Habanera (1895) for two pianos, the score of which he had borrowed, he produced Pagodes and La soirée dans Grenade, the first two pieces of Estampes, his first great work for piano.</p>
+  <br><p>If Ravel had misgivings over the formal perfection of his Pavane, he need not have feared for his Sonatine (1903-5) which, despite its curious origin — the first movement was written as his entry for an aborted composition contest — stands as one of the loveliest and most perfect of all his works. To the highly condensed first sonata-movement he added a minuet and a toccata-like finale. I’m reminded always of the idealised paradise presented by Baudelaire in L’Invitation au voyage, and particularly its three times repeated refrain:</p>
+  <br><p>La, tout n’est qu’ordre et beauté,</p>
+  <br><p>Luxe, calme et volupté.</p>
+  <br><p>In 1891 Mallarmé defined Symbolism as the art of “evoking an object little by little so as to reveal a mood or, conversely, the art of choosing an object and extracting from it an ’état d’âme’”. He added that this mood should be extracted “par une série de déchiffrements” (by a series of decipherings); that actually goes some way towards defining my job as a re-creative artist, but in discussing Miroirs (1904-5) I will try to do something along those lines in words, particularly because I think it one of Ravel’s best but most misunderstood, or, perhaps better, incorrectly apprehended, works. Roland-Manuel provides some interesting background information: “One evening, when Ricardo Vines had been to present his interpretation of D'un cahier d'esquisses to the celebrated composer of this little- known piece, he arrived at the rue de Civry full of what he had heard: Debussy had declared to him that he was dreaming of a kind of music whose form was so free that it would seem improvised, of works which would seem to have been torn out of a sketchbook. Ravel was present at the gathering. Quite unexpectedly he approved of the idea and confessed that the music he was working on was based on similar principles: 'I shall be glad’, he said,’ to produce something to set me free from Jeux d'eau". When Ravel later declared Oiseaux tristes to be the ‘most typical’ of the set, he was surely referring to this notion. Miroirs — mirrors — quintessential Symbolist title (like Images); there’s an extraordinary scene in Huysmans’ novel A Rebours (Against Nature) where its ‘hero’ Des Esseintes contemplates by the dim light of his lamp his treasured possession, Gustave Moreau’s painting of Salome, whilst reading a fragment of Mallarmé’s Hérodiade “that seemed to lay a magic spell on him at certain times”; perhaps it did. too, on Ravel:</p>
+  <br><p>..... O miroir!</p>
+  <br><p>Eau froide par l’ennui dans ton cadre gelée</p>
+  <br><p>Que de fois et pendant les heures, desolée</p>
+  <br><p>Des songes et cherchant mes souvenirs qui sont</p>
+  <br><p>Comme des feuilles sous ta glace au trou profond</p>
+  <br><p>Je m’apparus en toi comme une ombre lointaine,</p>
+  <br><p>Mais, horreur! des soirs, dans ta sévère fontaine,</p>
+  <br><p>J’ai de mon rêve épars connu la nudité!</p>
+  <br><p>Oh mirror! cold water frozen by ennui within your frame, how many times, for hours on end, saddened by dreams and searching for my memories, which are like dead leaves in the deep hole beneath your glossy surface, have I seen myself in you as a distant ghost! But, oh horror! on some evenings, in your cruel pool, I have recognised the bareness of my disordered dream!</p>
+  <br><p>The notion of these pieces as dream sequences, constructed by rapid cinematic cutting and cross-cutting, imbued with almost ‘expressionist’ intensity has puzzled many commentators (‘not generally regarded as one of Ravel’s best’, opines one) and yet an inability to grasp this seriously diminishes the range of Ravel’s total achievement. Each piece is dedicated to one of Ravel’s fellow-Apaches. Noctuelles (Owlet-moths) takes its title from a poem by its dedicatee, Léon-Paul Fargue “Les noctuelles des hangars partent, d’un vol gauche, cravater d’autres poutres”; vol gauche is the key phrase — everything in the piece is seeking, groping, fugitive, awkward. The central, slow section comprises snatches of themes which hint at the passionate ardour which lies at the heart of Miroirs; note the marvellous way these are broken up by ‘vols gauches’ as a way of resuming the rapid material. Oiseaux tristes (Sad birds), dedicated to Ricardo Viñes, evokes, according to Ravel, “birds lost in the torpor of a very dark forest during the hottest hours of summer”. Here all is static, disjointed, oppressive, anxious, unresolved. Une barque sur l'océan (A boat on the ocean), dedicated to Paul Sordes, is the central, and longest, piece of the set. It is, apart from anything else, a masterpiece of essentially piano writing — Ravel orchestrated it but, for once, was dissatisfied with the result and withdrew it. Briefly described, the piece opens with caresses; alternates passion and tenderness — increasing passion producing ever-lovelier moments of tenderness; is arrested in a moment of luminous stasis; boils over in an almighty climax, subsides in a series of ‘aftershocks’ and shudders; and ends with a resumption of the most exquisite tenderness. Alborada del gracioso (The jester’s dawn-song), dedicated to M.-D. Calvocoressi, was Ravel’s first published piece to have a Spanish title,a title so striking and unusual as to suggest not simply an excuse for Ravel’s ‘Spanish’ manner, but some precise connotation. An alborada was a song sung at dawn to rouse lovers from their night of bliss and to warn them of approaching day. The piece seems to me quite clearly ‘programmed’ — the Fool comes in swanking and swaggering, each phrase of his raucous ‘cante jondo’ is met by wonderfully rapt musical gestures that evoke the bliss of the lovers, the more he urges his song the more rapturous becomes these evocations; he tries every trick to rouse the lovers including a few somersaults (double-glissandi on the piano!!) to no avail; for a moment, just before the coda of the piece he seems to become bound up himself in the lovers' bliss but eventually he recovers his senses and succeeds in his task as the piece is driven to a spectacularly explosive end. If this is accepted as a ‘reading’ of the piece, then it need hardly be said that the three preceding movements are not ‘about’ moths, birds, or a boat heaving on the breast of the ocean! Furthermore the final piece, La vallée des cloches (The valley of the bells), dedicated to Maurice Delage, then stands as the perfect coda to the sequence, its central ‘souvenir of Love’ (an intensely lyrical passage marked ‘broadly sung’) framed in the finally attained calm and stillness of the bells. “It is the spectator, and not life, that art really mirrors”, said Oscar Wilde; a work like this has endless connotations; for instance, the falling 2-note phrase which is heard throughout this work has a very special connotation for me, as I feel sure it did for Ravel.</p>
+  <br><p>Ravel’s duality is nowhere more vividly exemplified than in the two keyboard works of 1908. Ma Mère l'Oye for the piano, 4 hands, and Gaspard de la nuit. Le jardin féerique, the final movement of Ma Mère l'Oye, is the symbol of Ravel’s ideal world which reaches its apotheosis in the final scene of L'Enfant et les Sortilèges. Gaspard de la nuit is, for me, the greatest Decadent work of art, the acme of artistically rendered ‘sensation’. It takes its inspiration and title from a collection of prose poems by Aloysius Bertrand (1807-1841), to which Ravel had been introduced by Ricardo Vines. Like his contemporary, Edgar Allan Poe, Bertrand was obsessed with the world of the supernatural — Gaspard de la nuit is a nickname for the Devil — and thus was one of the cult figures of the fashionable Satanism of the Symbolist artists. Such literary inspiration is very ‘romantic’, very Lisztian, but even though the three poems chosen by Ravel are reproduced here, as they are in the score, there is no literal following of the ‘story-line’. Ondine, in fact, would seem to have been prompted as much by Brugnot’s epigram as by Bertrand's poem. Technically it is inspired to an extraordinary degree by Liszt. I’m not going to give you a bar-by-bar account but this is a work utterly suffused with Lisztian minutiae. Ondine suggests Huysmans’ description of Gustave Moreau’s Salome: “la déité symbolique de l’indestructible Luxure ... la Beauté maudite” — “the symbolic incarnation of Lust ... the accursed Beauty”. Note the incredible moment at the end of the piece, after all the “batteries of alluring sense”, where the vague harmony finally dissolves into pure C sharp major and the enticement is over. In Le Gibet grim desolation is squarely confronted and the bell which tolls, unchanged, from start to finish forces the listener to confront it. Le Gibet is one of the most rivetting artistic embodiments of that late 19th century syndrome ‘ennui’, and what does the rivetting are the repeated B flats insidiously gnawing away. ‘Ennui’ had its self-ndulgent side, but notice here how, immediately after the more ‘expanded’ tune, the desolation returns via the lowest piano tam-tam. The tolling bell acts as an ostinato back-drop against which to deploy bizarre harmonic colours; these are themselves ‘irradiated’ tonally by the B flats as well as ‘fixed’ rhythmically — in other words the bell is both a ‘rhythm’ and an ‘atmosphere’. The deliberate monotony of this combined with the direction to use the una corda pedal throughout apparently caused the faithful Ricardo Viñes for once to have misgivings and he and Ravel seriously fell out over it. In Scarbo Ravel set out quite deliberately to write the most difficult piano piece ever, something more difficult than Liszt or than Balakirev’s Islamey. It is as though, by piling up such terrors for the pianist, he would inculcate feelings of terror in the listener. Scarbo is a very malignant piece, dark, relentless, and yet, like everything in this magnificent work, lifted to a pitch of exaltation that assures its status as a masterpiece, perhaps the masterpiece of 20th century piano music.</p>
+  <br><p>In 1909 the Société Internationale de Musique commissioned several composers to write something to commemorate the centenary of the death of Haydn. Those who obliged were Debussy, Dukas, d’Indy, Widor, Hahn, and Ravel with his Menuet sur le nom d'Haydn. By using an extended version of the German musical alphabet HAYDN becomes BADDG, a series which Ravel also uses in retrograde and melodic inversion.</p>
+  <br><p>Valses nobles et sentimentales (1911) show Ravel breaking radically new ground. Although written concurrently with Daphnis et Chloé they are the first steps on a protracted journey towards a more objective, less harmonically personal, manner of writing. The change in style is so marked that when the work was first performed, in a concert of anonymous works for which the audience was invited to suggest composers on slips of paper, Ravel’s authorship was guessed by only a tiny majority. Ravel himself referred to “a style that is simpler and clearer, in which the harmony is harder and the lines of music are made to show up”. From the start of his career it is evident that Ravel could have relied almost exclusively on his extraordinary melodic gift, though in his earlier manner this is held very much in reserve. The Valses place much more emphasis on this gift. The very title, borrowed from Schubert, though it helps to differentiate between fast and slow waltz tempi, may also have been chosen in homage to Schubert to stress this fact. It was, of course, chosen for its objectivity, its deliberately unevocative tone further reinforced by a prefatory quotation, from Henri de Régnier “le plaisir délicieux et toujours nouveau d’une occupation inutile”, the sort of Symbolist aesthetic to be found in Oscar Wilde (The Critic as Artist, for example, or the Preface to The Picture of Dorian Gray: ‘All art is quite useless’). If ‘sentimentale’ means anything at all here, it is merely to draw attention to one of the most wonderfully endearing characteristics of Ravel’s music — his infinitely lonely lyricism. The suite, played without a break, comprises seven waltzes and a miraculous epilogue wherein fragments of the preceding waltzes float in and out of a dream-like tapestry of sound, which suggests to me that the closest precursor of this work may not be Schubert but Schumann, especially Papillons.</p>
+  <br><p>1913 saw the appearance of three short piano pieces. Prelude was written as a Conservatoire test piece; its asymmetric phrasing (3 bars + 2 + 4 + 6) and its surprisingly expressive intensity lift it above mere ‘occasional’ status. The two pastiches A la manière de Borodine, Chabrier are carefully sited half-way between Borodin, Chabrier and Ravel so that a real indebtedness is acknowledged and manifested. The Borodin piece shows what he's learned (compare it with No. 4 of Valses nobles et sentimentales) and what he’s rejected — the big, rhetorical ‘passionate’, climax. The deliciously witty Chabrier piece is,a double parody — Ravel in the style of Chabrier improvising on a theme of Gounod. If confirmation were needed of the real sophistication of these pieces it could easily be found by comparing them with the uncomprehending doodlings of Alfredo Casella (particu-larly his A la manière de Ravel) published in the same volume.</p>
+  <br><p>Le Tombeau de Couperin (1914-17) was Ravel’s last composition for solo piano, interrupted, as the dates indicate, by his war service. He declared that “the homage actually applies less to Couperin alone than to the whole of 18th century French music”. He did, however, do a preliminary transcription of a Forlane by Couperin, and thereby hangs a little-known tale that gives the work a delicious contemporary piquancy. In the letter to Roland-Manuel about Le Tombeau quoted earlier, Ravel says of his French Suite that “there’ll be a forlane and a gigue; not a tango, though; it appears that in 1914, for some reason, the Pope, through the Archbishop of Paris, in effect banned the tango. In polite society an attempt was made, unsuccessfully, to replace it with the Forlane. Ravel, ever ready to get in an anti-clerical dig, wrote to a friend: “I’m beavering away for the benefit of the Pope. You know that this august personage for whom the House of Redfern will be doing costume designs next, has just launched a new dance, the Forlane. I’m transcribing one by Couperin, I’m going to get it danced at the Vatican by Mistinguett and Colette Willy in drag”. Ravel’s favourite movement was the Menuet, the last of his four minuets for piano, each possessing its own sad, nostalgic, fragile innocence. Every dance had its own specific emotional quality for Ravel — in 1906 he had written “I find a deeper expression of the joys of life in the dance than in Franckist puritanism I am well aware of what is in store for me at the hands of the acolytes of neo-Christianity but I’m not bothered”.</p>
+  <br><p>Yeats could have been writing about Le Tombeau de Couperin and indeed about the whole subject of Ravel when he spoke of Symbolist artists who “express personal emotion through ideal form, a symbolism handled by the generations, a mask from whose eyes the disembodied looks, a style that remembers many masters that it may escape contemporary suggestion”.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
