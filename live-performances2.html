@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Videos</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background: #444;
+        color: #fff;
+    }
+
+    /* ==========================
+       SITE TITLE
+       ========================== */
+
+    .site-title {
+        background: #fff;
+        color: #000;
+        font-size: 32px;
+        padding: 20px 30px;
+    }
+
+    /* ==========================
+       NAVIGATION
+       ========================== */
+
+    nav {
+        background: #000;
+        width: 100%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        padding: 14px 18px;
+        text-decoration: none;
+        color: #fff;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* ==========================
+       DROPDOWNS
+       ========================== */
+
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        white-space: nowrap;
+        padding: 12px 16px;
+    }
+
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* ==========================
+       HAMBURGER BUTTON
+       ========================== */
+
+    .menu-toggle {
+        display: none;
+        width: 100%;
+        text-align: left;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* ==========================
+       VIDEO GALLERY
+       ========================== */
+
+    .video-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+        padding: 40px 30px;
+        background: #444;
+    }
+
+    .video-card {
+        background: #555;
+        padding: 15px;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+        top: 0;
+        left: 0;
+    }
+
+    .video-text {
+        margin-top: 15px;
+    }
+
+    .video-text h3 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .video-text p {
+        line-height: 1.6;
+    }
+
+    /* ==========================
+       FOOTER
+       ========================== */
+
+    .footer {
+        background: #444;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* ==========================
+       TABLET
+       ========================== */
+
+    @media (max-width: 1000px) {
+
+        .video-gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    /* ==========================
+       MOBILE
+       ========================== */
+
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .video-gallery {
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li><a href="https://www.google.com">Home</a></li>
+
+            <li><a href="https://www.google.com">Bio</a></li>
+
+            <li><a href="https://www.google.com">Recordings</a></li>
+
+            <li><a href="https://www.google.com">Live Performances</a></li>
+
+            <li class="dropdown">
+                <a href="https://www.google.com">Photographs ▼</a>
+
+                <ul class="submenu">
+                    <li><a href="https://www.google.com">Concert Portraits</a></li>
+                    <li><a href="https://www.google.com">Live Recitals</a></li>
+                    <li><a href="https://www.google.com">Behind the Scenes</a></li>
+                    <li><a href="https://www.google.com">Press Images</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://www.google.com">Videos</a></li>
+
+            <li>
+                <a href="https://www.google.com">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a href="https://www.google.com">Writings ▼</a>
+
+                <ul class="submenu">
+                    <li><a href="https://www.google.com">Articles</a></li>
+                    <li><a href="https://www.google.com">Programme Notes</a></li>
+                    <li><a href="https://www.google.com">Essays</a></li>
+                    <li><a href="https://www.google.com">Interviews</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://www.google.com">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ==========================
+     VIDEO GALLERY
+     ========================== -->
+
+<section class="video-gallery">
+
+    <div class="video-card">
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Video 1"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-text">
+            <h3>Beethoven Sonata No. 32</h3>
+            <p>
+                Live recital performance recorded at Wigmore Hall,
+                London.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                title="Video 2"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-text">
+            <h3>Schubert Piano Sonata</h3>
+            <p>
+                Excerpt from a recital dedicated to the late piano
+                sonatas of Schubert.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/M7lc1UVf-VE"
+                title="Video 3"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-text">
+            <h3>Masterclass Session</h3>
+            <p>
+                Public masterclass discussing interpretation and
+                technique.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Video 4"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-text">
+            <h3>Debussy Preludes</h3>
+            <p>
+                Selected performances from a programme of French
+                piano music.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                title="Video 5"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-text">
+            <h3>Interview</h3>
+            <p>
+                Reflections on performance, repertoire and teaching.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/M7lc1UVf-VE"
+                title="Video 6"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-text">
+            <h3>Encore Performance</h3>
+            <p>
+                Encore from a recital featuring works by Chopin and
+                Liszt.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     FOOTER
+     ========================== -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+                Paul Crossley - Concert Pianist
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (
+                    submenu &&
+                    submenu.classList.contains('submenu')
+                ) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
