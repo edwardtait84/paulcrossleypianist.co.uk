@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>SCRIABIN LATE PIANO PIECES</h2>
+  <br><p>This CD comprises virtually all the later piano pieces of Scriabin that are not Sonatas: some of the most strikingly original piano music ever written, work of such impeccable quality and technique as to be fully worthy to stand alongside the contemporary piano music of Debussy and Ravel, and yet almost totally unknown and, largely, unplayed.These pieces are not offshoots of the Sonatas or try-outs for them.They are an entirely different utterance - fragmentary, yet complete; concentrated, precise, yet fluid and suggestive; reticent, for the most part, yet carrying the most extraordinary erotic charge. Their ambition may have been less than that of the Sonatas, but the result is not slighter.To suggest that they might, even, surpass the achievement of the Sonatas may be contentious, but they do have a perfection of style, of style matched to idea, of balance, of consistency which the later Sonatas (Nos. 6, 7, and 8 in particular), for all their incidental glories, lack.</p>
+  <br><p>Indeed, Aaron Copland who praised Scriabin’s later music as “truly individual, truly inspired” criticised him for putting “this really new body of feeling into the strait-jacket of the old classical sonata-form, recapitulation and all”, and went so far as to deem it “one of the most extraordinary mistakes in all music”. Harsh, but it has to be admitted that Scriabin was not necessarily on the easiest of terms with his originality. In particular the problem for him of the extended work was basic in his later style which rejected almost all the conditions by which it might exist. It did, however, suggest alternative strategies: the pieces on this CD are entirely successful attempts to give shape to Scriabin’s “really new body of feeling”.</p>
+  <br><p>Op. 51 | Op. 52</p>
+  <br><p>The Suite would be one obvious solution and, whilst the absolutely superb transitional (to the new style, that is) pieces that make up Op. 51 and Op. 52 work well in Suite form there is no actual evidence that Scriabin planned them as such.</p>
+  <br><p>Op. 57</p>
+  <br><p>What I am certain of, however, is that by the time of the 2 Pieces Op. 57, he had hit on a highly effective device - a kind of ‘dualism’ in that the pieces, in a single opus number, are joined purposefully. Rather than arguments/developments - sonata-like - between two or more complexes of material, they are presented as separate, divergent, but complementary pieces. This is carried through, in most of these later works (Opp. 57, 59, 63, 67, 69, 71 and 73) too systematically to be accidental, the ‘dualism’ too apparent to be otherwise. It is something quite as marked as the Schumann Florestan and Eusebius polarity (though of an entirely different nature). Sometimes it is something split into itself and its opposite, sometimes into two versions of itself, but in either case the bringing together yields an unexpected relation.</p>
+  <br><p>Op. 58</p>
+  <br><p>The title Album Leaf scarcely does justice to the importance of this piece nor to its extreme sensuality, though the fact that it stands alone, with its own opus number, does. In effect, this is the piece that launches his final period, his completely achieved final style, some key points of which are:</p>
+  <br><p>- pieces built out of a nexus of chords derived from a single complex harmony - often referred to as the ‘mystic chord’.<br>- persistent dominant harmony, that is, the harmony with the greatest longing to return to the home key - ‘desire’.<br>- a kind of timeless music, perhaps - better - an immobilisation of time, a music free of time, something which Toru Takemitsu, much later, would describe memorably as ‘time as floating’.<br>- an increased and increasing radiance. Though the music is based on chords, the writing is rarely, if ever, chordal. It is largely 2 or 3-part invention, although held in long pedals, producing a quite amazing variety of figuration, mood and gesture.</p>
+  <br><p>Op. 59</p>
+  <br><p>To the radiant poetry of the first piece is opposed one of the very few examples of rhetoric in this series of pieces.The piece is marked savage, warlike, but is a strange stuttering, stammering utterance - agitated, breathless, the texture much enlivened but any sense of propulsion angrily frustrated.</p>
+  <br><p>Op. 61</p>
+  <br><p>Scriabin, follower of Chopin that he was, would not have used Nocturne - the most intensely personal, poetic Chopin - lightly.To combine Poème and Nocturne in his mind would be to attempt an ultra-poetic statement.</p>
+  <br><p>This is, also, a ‘night piece’ - ‘night’ as in ‘dark/half-lit’,‘erotic’, above all ‘dream’.‘As if in a dream’, is one of the work’s repeated instructions. The form of the piece is a ‘dream assemblage’ (something which Toru Takemitsu, again, would make very much his own) - fragments which are never elaborated or even dove-tailed.This is unconscious process rather than will-ful and determined, the opposite of the calculated unfurling of material that is the Sonatas; a music of discontinuous, mosaic circularity.The progress of the piece is from silence to erotic intensity to silence, dark to light to dark, inchoate to crystalline to inchoate. For Scriabin this was a one-off conception of form for the extended work - it is as long as Sonata No. 4 or Sonata No. 9. Between Prometheus Op. 60 and Sonata No. 6 Op. 62 its reticence, reserve, lack of excess, even in its most highly charged episode, is very marked. This is music of a disturbing poetic singularity, yet, surely, one of his finest achievements.</p>
+  <br><p>Op. 63</p>
+  <br><p>For a while Scriabin lived in Brussels where he met the painter Jean Delville who, famously, designed the cover for the score of Prometheus. In the artistic circles Scriabin frequented it would be surprising if he were not also introduced to the bizarre Mask paintings of the Belgian James Ensor.The score of Masque even carries the performative instruction:“bizarre” (unique in music, I should think). Ensor, describing what masks meant to him, referred to “strident expression ...flamboyant unexpected gestures ...disordered movement ....exquisite turbulence.” Not surprisingly Etrangeté was a great favourite with audiences at Scriabin’s own recitals.</p>
+  <br><p>Op. 67</p>
+  <br><p>The same chord - beginning and ending. Extraordinary pairing and both ‘dark’ pieces. As Scriabin’s harmonic discoveries progressed, and despite his determined rejection of minor keys (Op. 5 I No. 2 is the last piece unequivocally in the minor), the music moves, in one of its manifestations, to a much darker phase of gloom, melancholy, dejection - perhaps more than he might have liked as his own comments on Sonata No. 6 would suggest.</p>
+  <br><p>The pieces are two forms of immobility - the first stagnant, viscous, an endless melody aching to free itself: the second, an etude for the left hand, paradoxically, a perpetuum mobile, but actually a vortex, a spectral whirlwind, surely influenced by the last movement of Chopin’s Funeral March Sonata.</p>
+  <br><p>Op. 69</p>
+  <br><p>If the two pieces of Op. 67 are both ‘dark’, these two pieces are both ‘light’.There is a lot of air in these pieces; to the translucent luminous fragility of the first piece is opposed the capricious concentration of incident, the intensity of the mosaic of gestures of the 2nd piece which is very striking - dance, languor, scherzando all in under a minute. Perhaps Danses might have been a better title than Poèmes, but they are beginning to be interchangeable, or interconnected. ‘Dance’, in any case, should be thought of in the Isadora Duncan (who Scriabin saw - loved the dancing, hated the music she danced to), Loie Fuller, Mary Wigman sense, and, much better, in the sense so deeply understood by T.S. Eliot in Burnt Norton:</p>
+  <br><p>... at the still point, there the dance is.<br>But neither arrest nor movement.</p>
+  <br><p>Op. 71</p>
+  <br><p>The first piece returns to the darkness of Op. 67: short, choked phrases; a brooding, intense melancholy. By contrast, the second - dreaming - comprises very long phrases, ethereal, gentle, imploring even, but with a dark undertow. In the same piece oppositions are beginning to fuse. For me, a growing menace hangs over the later music, which, set against a somehow more precarious radiance, gives it a unique potency.</p>
+  <br><p>My interpretation of the first piece is based very much on the similarities I find between it and Takemitsu’s Orion for cello and piano (or orchestra).There is - deliberately, I believe - no definitive way to read Fantastique.All this music involves the performer in much decision-making. Apart from a few allegrettos and the odd presto, there are no tempo indications, and, certainly, no metronome markings; dynamics are very few and far between; crescendi are indicated from an initial dynamic but without a final one, or, indeed, where they end at all; material, once stated, is given instructions which are not repeated upon re-statement or transposition; pedalling, apart from one instance in Feuillet d'album, is never indicated, so how long are the long pedals? “Time as floating” is wonderfully achieved. Scriabin’s music is, in fact, a triumph of notation in this respect, but in addition there are rubati, rhythmic hesitancies which Scriabin marks with horizontal lines, something clearly heard on the second beat of Désir. (I am very grateful to Oliver Knussen, who has orchestrated this piece, for drawing my attention to Scriabin’s own piano roll recording of Désir, where his intention is very clear and pronounced).To give a very specific example Flammes sombres opens with a p and that’s that!! So - is the very end, after all that has gone before, and which recapitulates the opening material, p - resignation, or ff- defiance? On this CD you have the latter, but I wouldn’t be surprised if the next time I play it in the concert hall, it will be resignation! It was remarked, in his lifetime, that Scriabin never played his music twice in remotely the same way.This is not carelessness of notation, but part of the unwilled, spontaneous, unpredictable magic of this music - a music that refuses determination.</p>
+  <br><p>Op. 72</p>
+  <br><p>Vers la Flamme is one of Scriabin’s greatest successes, a brilliant solution to the problem of the more extended work, but one that could probably only have been attempted once. It is a long, sustained crescendo: dynamically from ppp to ffff, in intensification of the texture via the progressive diminution of note values and the expansion from the middle of the keyboard to its extremes (i.e. the page becomes blacker and blacker with notes); and a heightening of emotion from the dark brooding opening to ‘passion naissante’ (Scriabin’s words) to the most impassioned. One is made astonishingly aware of the element of his music that has been ruthlessly expunged from the pieces on this disc - bravura. This is the one piece that, in its delirium, is driven to a spectacular conclusion.</p>
+  <br><p>Op. 73</p>
+  <br><p>An equal success - the most extreme and, certainly, the most complex and fertile dualism. The keyboard itself is split in two - Guirlandes predominantly in the upper register, Flammes sombres in the lower. Simplistically the opposition is between visionary exaltation and perhaps the darkest music that Scriabin ever wrote, but, in each case, qualified. The luminosity, the fantastic gleam of the treble in Guirlandes is, in the harmony, darkly underlit - this is a very disturbed radiance. Similarly, in Flammes sombres the “deep dejection” - Scriabin’s musical/ emotional instruction - of the music is shattered by the barbaric “dance to destruction” episodes.Together they form an extended piece (7 minutes) of sustained intensity that resumes, for me, his most completely successful Sonata - No. 4 - in his later language.Whatever the titles, this is Poème and Danse, as is Sonata No. 4.</p>
+  <br><p>Op. 74</p>
+  <br><p>In these final works, as the harmonic discoveries continue, there is an increasing toughness to the music.Though the vision remains, there is a more anguished response to it. Any idea of the languid, effeminate poet (and it was an accusation much levelled at him during his lifetime due to his diminutive stature, delicate handsome appearance, and fastidious gestures) is quite dispelled. If earlier pieces on this CD evince the spiritual, mystical, transcendent aspect of‘Expressionism’, Vers la Flamme and Flammes sombres move to a more paroxysmal, agonised, Expressionist utterance.This is confirmed in Op. 74, particularly in the first piece - marked “anguished, heartrending” - which is of an almost Berg-like intensity.Though we, in our time, have deleted Scriabin from the ‘modernist’ canon, the Expressionists themselves were quick to claim him as one of their own. His was the first music ever performed at Schoenberg’s Society for the Private Performance of Music, and in his lifetime his music, together with Schoenberg’s, took pride of place in the Blue Rider Almanac of 1912. In that publication, there is a highly perceptive article on Scriabin (with particular reference to Prometheus) by Scriabin pupil - and, later, biographer - Leonid Sabaneyev that goes to the heart of the later Scriabin project. He writes: “In analysing Scriabin’s work it is difficult to distinguish its individual forms from the general idea, from the ultimate ‘artistic idea’ that has now become explicit in the composer’s consciousness. The artistic idea is a positive, mystical action that leads to an ecstatic experience - to ecstasy, to the perception of more elevated dimensions of nature”; and “... all the main themes ... from which the composer creates his texture derive from a ‘single’ harmony (which) has the capacity to include the most diverse nuances beginning with a mystical horror and ending with a radiant ecstasy and caressing eroticism”.</p>
+  <br><p>In these later piano pieces Scriabin, it seems to me,found his ‘ideal’ form, in that the form approximates as closely as possible to the inner idea and the inner experience (Copland’s ‘really new body of feeling’). These are not marginal works. They are a succession of pieces of fundamental affinity, manifestations of the same ecstatic vision - vers la flamme - fragments of a universe, and a very self-consistent one: the essential Scriabin.</p>
+  <br><p>A short note on the cover painting. I have deliberately avoided talking about Scriabin’s ideas/philosophy which I do not think helps one to any appreciable understanding of the music. He was, however, like very many artists at the beginning of the 20th Century very taken with ‘theosophy’. Kandinsky was an ardent ‘theosophist’, as was Mondrian - and Frantisek Kupka. Interestingly, these three all later became pioneers and masters of Abstract Art.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
