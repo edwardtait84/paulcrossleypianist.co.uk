@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>Takemitsu Complete Piano Music</h2>
+  <br><p>Toru Takemitsu’s music for solo piano is some of the most distinctive, distinguished and best of the second half of the 20th century, and consistently represents him at his finest. That is, already, saying a lot for his is a quite extraordinary and original oeuvre, a music that, above all, breathes differently.</p>
+  <br><p>To invent himself in such a way that he proved quintessentially Japanese whilst, at the same time, taking his rightful place in the hierarchy of composers of the “Western” tradition could not have been easy; there were no models - he was the first. By doing this, not only did he become the first composer from Asia, let alone Japan, to gain widespread acceptance, he taught us in the West many things about our tradition which we had, possibly, overlooked, or which we had assumed were not dominant characteristics.That he should, by his own admission, have started out from Debussy, that, although self-taught, he considered Debussy his teacher, is not surprising. Debussy was, and remains, the composer who made the most radical break with the accepted Western tradition and he did this in very large part from what he had learned from Asian culture. His ‘feel’ for the East was to find an eager disciple in Takemitsu’s ‘feel’ for the West: a shared concentration on vibration and silence; the ‘grain’ of sound, its character and length as opposed to strong metrical and rhythmic accent; everything organised around qualities of sound patterns rather than around their significance in an architectural scheme; divisions and definitions created out of a wavering flux of sound; the world of dream, water, sea, garden, rain, tree, and wind of which Takemitsu so often spoke, and which is there also in Debussy’s titles - the unpredictable, fluctuating forms of nature which mirror, symbolise, are existence itself.</p>
+  <br><p>The earliest piece on this CD, discovered amongst his papers after his death, is Takemitsu’s first, Romance, composed in 1948; in the following year, a very slightly revised version was taken to, and dedicated to Yasuji Kiyose, the only composer from whom Takemitsu ever received guidance. The performance on this CD is of the now published version which the present pianist prepared from the 1948 and 1949 manuscripts. Romance is a highly significant addition to the Takemitsu canon in that it pre-figures much that was to follow. In essence, it is a cortège (I think, if Takemitsu had lived, he might have re-named it thus) suggested by its expressive instruction Adagio sostenuto, nobile e funebre. Three of Takemitsu’s piano pieces are specific memorial tributes, but, in all his music, from the early sombre period (Romance,Litany, Requiem for strings), through his experimental period of the 60s, and even in the liberated sensuality and colour of his later music with its lingering walks through gardens of earthly delight, there is a prevailing tone of elegiac sadness, of dignified yet impassioned lament for the beauties that must be left behind.</p>
+  <br><p>For the first performance of Litany, Takemitsu wrote: “When I heard that my good friend Michael Vyner had passed away, the composition used for my first public performance immediately came to mind. This piece entitled Lento in Due Movimenti was originally composed in 1950 while I was confined to bed during my bout with tuberculosis. The feeling of death was quite close to me at that time. And this piece reflects emotional grief. Unfortunately, Lento in Due Movimenti was performed just once and the musical score had been lost for the most part with only certain fragments remaining.Therefore, I decided to re-compose this piece from the fragments and also from my memory. I have tried to avoid adding any extra embellishments as much as possible.” Not only did Takemitsu not add embellishments, he, in fact, did quite the opposite. The piece remains in outline but concentrated, refined, stripped down to the simplicity of its utterance, to the tragic statement it wishes to make. Its notes (most of them) may have been written in 1950, but their disposition is very much that of a mature master.</p>
+  <br><p>The obvious influence of Messiaen’s Préludes in the second part of Litany (considerably less overt than in the 1950 score) is equally to the fore in the sad Uninterrupted Rest No. I (1952).The title is from a poem by ShuzoTakiguchi, poet, artist and critic who was probably the guru figure ofTakemitsu’s formative years.The two movements that were added in 1959 point the way to the period that includes Piano Distance (though, and it is a tribute toTakemitsu’s peculiar alchemy, there is no sense of stylistic incongruity). That piece and Uninterrupted Rest No. 2 are, partially, experiments with a more radical 12-note language, and, partially, experiments with an unmeasured metrical notation - each bar is to last 3 seconds, note values are approximately indicated, but ultimate rhythmic responsibility rests with the performer.This was an attempt at an unfixed, more fluid notation but also reflects a certain idealistic stance of not asserting a central authorising identity, of ‘removing’ the author; and, Piano Distance was to be followed by two purely graphic works for piano(s) Corona and Crossing, forms of pure abstraction from which the personality has almost entirely departed.</p>
+  <br><p>It was to be another twelve years before Takemitsu wrote another piano solo piece, but, in that time, the piano was never out of his thoughts. From that period of intense experimentation and involvement with the mainstream of the post-war avant-garde Arc and, particularly Asterism, both for piano and orchestra, stand out as peaks of his achievement. In them, he learned how to expand and elaborate the resonances of his music into ever more fascinating explosive and eruptive piano figuration. This was, also, the time of his discovery of traditional Japanese court music - gagaku - “my impression of gagaku was that of a music that challenges measurable time”.</p>
+  <br><p>For away is the first of many titles he was to draw from James Joyce’s Finnegan’s Wake.</p>
+  <br><p>Titles were very important for Takemitsu. Unlike most composers, who find their titles after the composition of the notes,Takemitsu used to say that once he had found his title, half the notes were written. He liked Joyce’s use of words without their usual connections - words used to evoke resonance before settling, if at all, into meaning, dreamlike language that approached the condition of music. I suspect that Takemitsu was Joyce’s ideal reader, the inquiring savage carrying no baggage! And, in many ways, that’s how he approached and discovered music, and why he was able to forge such a personal and original style. Starting out from nothing, he encountered, as and when, a French chanson, American jazz, Debussy, Messiaen’s Préludes, Berg’s Violin Concerto, Webern, some Boulez, Cage, gagaku, whatever - never entire oeuvres, nor histories, and certainly never any traditions with their imperatives. (I remember envying him his freshness of discovery when he told me that his main musical idea for riverrun ( 1984) had occurred to him after a chance first hearing of Mozart’s Symphony No. 40 in G minor!) In For away the primary inspiration was a visit to Indonesia and a first encounter with gamelan, but in his use of it there is nothing picturesque, nothing folkloric, nothing “exotic” unless it be that all his musical encounters were in some way “exotic”. It is in incorporated and absorbed with seemingly effortless naturalness, becoming but one more colour of an ever more varied palette, its multiple grace notes challenging the otherwise precise rhythmic scoring to provide an extraordinary fluid texture, the notation of which is a triumph in itself. For away is, for me, his first indubitable masterpiece for solo piano and it was quickly followed by, perhaps, the masterpiece Les yeux clos. (These two, together with Les yeux clos II, are, surely, his greatest piano pieces.)</p>
+  <br><p>The title Les yeux clos is borrowed from a series of works, in lithograph and in colour, by the French artist Odilon Redon, beautiful images of indefinable and mysterious expressivity. The piece - “in memory of S.Takiguchi” - is prefaced by “Most important thing in performing Les yeux clos is to produce subtle changes of colour and the time as floating”. In the course of a television conversation with me Takemitsu described how the experimental music of the 60s, of which he had been a part, had become, for him, too intellectualised, too de-personalised, especially too lacking in the “erotics” of musical language which he had made it a particular aim to restore. By the time of Les yeux clos his mastery of notating “time as floating” was well achieved.To that he added the ferment of colour that he had exploited increasingly in orchestral works like Green and A Flock Descends into the Pentagonal Garden, and there can never have been a composer who enjoyed the sensuous world of sound with more relish and gusto than Takemitsu. This is, however, no indulgent hedonism, but a sensuousness used to suggest, to body forth, a timeless immanence. Interestingly, and significantly, his original thought for the title of Les yeux clos II was Prayer Bell, but, as he told Oliver Knussen:“Prayer Bell maybe too difficult.”. Nevertheless, (bell sounds - which resound throughout this piece - apart), he considered all music a form of prayer, and in both Les yeux clos with their endlessly rising phrases and motifs there is a marked quality of urgent and impassioned imploration.</p>
+  <br><p>Rain Tree Sketch merits another digression into the world of Takemitsu’s titles. It is generally assumed that Rain Tree comes from the short stories of that name by fellow Japanese artist Kenzaburo Oe, a charming and suggestive poetic affinity that Takemitsu was perfectly happy to endorse. However, he assured me that he first encountered Rain Tree as the brand name of an American shaving cream and that he always read the words as Rain/Tree so that the works of that name would be part of both his Rain series of pieces and his Tree series of pieces. Sketch was added as an afterthought, possibly to refer to the brevity of the piece, possibly because it uses some of the material of the piano part of his chamber orchestra piece Rain Coming - written at the same time - possibly to refer to its improvisational quality. In the event he used Rain Tree Sketch for his, again, short piece in memory of Messiaen. Compositionally, both works explore in particular the upper registers of the piano. In a television interview Takemitsu once declared:“My music is bottomless - I only have the top - that’s because I’m Japanese.”</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
