@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>DEBUSSY: PIANO MUSIC, VOLUME 2</h2>
+  <br><p>I remember, once, hearing a radio interview with the composer Darius Milhaud (1892-1974) who, of all people, confessed to being in his youth musically rather strait-laced. He was, above all, very disturbed by the use of the vernacular - popular songs and dances - and other musical ‘found objects’ in Debussy’s music. When he admitted this to his harmony teacher, André Gédalge (1856- 1926), the latter laughed and replied, “Oh, but surely you realize Debussy can do no wrong!”.</p>
+  <br><p>This compilation is studded with the things Milhaud so objected to: a surprisingly faithful reproduction of Javanese ‘gamelan’ music in Pagodes (Pagodas), Spanish habaneras in La soirée dans Grenade (Evening in Granada) and ...La Puerta del Vino (The Wine Gate), cake-walks in .. .General Lavine - eccentric and Golliwogg’s Cake-walk (the habanera and cake-walk being very close relatives!), a café waltz in La plus que lente (“Slower than Slow”, a jocular reference to the then fashionable genre of the slow waltz, or valse lente); “God Save the King” in .. .Hommage à S. Pickwick, the “Marseillaise” in ...Feux d'artifice (Fireworks); nursery songs in Jardins sous la pluie (Gardens in the rain), “Au clair de la lune” at the start of ...La terrasse des audiences du clair de lune (The terrace where moonlight holds audience), “The Camptown Races” in ...General Lavine; Brahms in ...Les fées sont d’exquises danseuses (Fairies are exquisite dancers), Wagner - Tristan und Isolde in Golliwogg’s Cake-walk, Siegfried at the start of ...Les tierces altemées (Alternating thirds), Clementi studies and Czerny exercises in Doctor Gradus ad Pamassum: the ‘exotic’ and the commonplace, from which so much of Debussy’s fantasy takes form.</p>
+  <br><p>Perhaps the key set of pieces in this recital is Children’s Corner, dedicated by Debussy to his only child Chouchou “with the tender excuses of her Father for what follows”. What was the significance of the world of childhood for Debussy that he should consecrate one of his most assured masterpieces to it?</p>
+  <br><p>In his own words:</p>
+  <br><p>“I abominate doctrines and their impertinences. That’s why I want to write my musical dream with the greatest detachment from myself. I want to sing my interior landscape with the naive candour of childhood.”</p>
+  <br><p>On Mussorgsky’s The Nursery:</p>
+  <br><p>“In The Nursery there is the prayer of a little girl before she falls asleep which conveys the thoughts and the sensitive emotions of a child, the delightful ways of little girls pretending to be grown-up; all with a sort of feverish truth of interpretation only to be found here. The Doll’s Lullaby would seem to have been conceived word by word, through an amazing power of sympathetic interpretation</p>
+  <br><p>“There have been, and they still exist, despite the disorders which civilization brings in its train, charming little peoples who learned music simply as one learns to breathe. Their Conservatoire is the eternal rhythm of the sea, the wind in the leaves, the thousand little noises which they listen to carefully, without ever consulting arbitrary treatises. Their traditions only exist in very old songs and dances to which each one of them, through the centuries, brought his respectful contribution.”</p>
+  <br><p>In the worlds and imaginations of the child, the “man in the street”, the “little peoples” of other cultures, Debussy, I think, saw an ideal - an ideal of the individual free to express himself without the let and hindrance of “civilization”. Although the aspects to which I have drawn attention are but elements in a rich and complex personal style, so much of his music is imbued with their spirit. All Debussy’s work was a life-long struggle to liberate himself from the restraints of self-consciousness, a search after the “feverish truth of interpretation”. A great deal of that was found in the “musics” of “little peoples”, but also, and it is a startling aspect of his originality, in his amazing ability to stand outside the entire musical culture to which he was heir. As the German composer Dieter Schnebel has written about the first piece on this CD, ...Brouillards: “No theme, no development; no traditional form; no counter- point nor harmony in the usual sense of the word; no ‘tunes’, nor ‘accompaniment’; no principal or secondary voices; no tonality, diatonic, chromatic or whatever. Nothing that reminds one of contemporaries like Schoenberg or Mahler. Just a ‘sonic chemistry’ [...]”.</p>
+  <br><p>All of which makes Debussy’s music, to this day, some of the most challenging and ‘modem’ ever penned, and, some of the most essential - “Debussy can do no wrong”.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
