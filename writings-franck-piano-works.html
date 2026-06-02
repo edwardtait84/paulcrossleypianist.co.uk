@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>Franck Piano Music</h2>
+  <br><p>César Franck composed his Prélude, fugue et variation as one of six works for organ, in 1862, his 40th year. Franz Liszt’s comment about the set was unequivocal: “These poems have their place alongside the masterpieces of Bach”. Georges Bizet, on hearing the Prélude, fugue et variation, was astonished, and exclaimed to the composer that the piece was exquisite. It is indeed a remarkable and beautiful piece, and it suggests a composer who had already “arrived.” And yet, Franck took almost another twenty years to find his mature style and to embark on the dozen or so masterpieces that have immortalized his name.</p>
+  <br><p>Why it took Franck so long to realize his compositional maturity can only be a matter of speculation. His ambitious and domineering father had wanted him to be a virtuoso pianist; Franck was eminently up to this task, which may have diverted him from his ultimate des- tiny. His equally domineering and conventional wife channelled him into the high-minded and fashionable world of oratorio. Of even more stylistic significance may have been Franck’s maverick status as a “French” composer. He was Belgian by birth and Parisian by training and residence (he became a naturalized French citizen in 1873). But his music comes, essentially, from Bach, Beethoven, Mendelssohn, Schumann, Liszt and Wagner. Of his contemporaries, Bruckner was the one whose style Franck’s music most resembled. They had met, briefly, in 1869; they admired each other, and the musical affinities between them were considerable. Franck’s music leads, if anywhere among 20th century composers, to the Schoenberg of Pelleas et Melisande and the Berg of the Piano Sonata. He leads, as well, to Elgar (but not the “school” of Vincent d’Indy and his followers). But despite this “Germanness”, Franck’s pronounced sensuality marks him as “French”. Perhaps his own name is a symbol of ambivalence; he was a “Frank” - a spiritual inhabitant of the old Carolingian middle kingdom between France and Germany.</p>
+  <br><p>As an explanation of Franck’s progress towards a mature and expressive style, a passion for one of his pupils, Augusta Holmes, also has been suggested. Holmes was the dedicatee of his last work; and perhaps, as with Janacek in our century, a release of powerful feelings provided the impetus for a final supreme creative effort. But for whatever reasons, Franck had found a real sense of identity and a uniquely personal language by the late 1870s. These qualities came together to produce a steady stream of great works, from the Piano Quintet (1879) to the Three Chorales for Organ (1890).</p>
+  <br><p>Particular musical sources from which Franck quarried his own style were: Mendelssohn’s Prelude and Fugue in E minor, Op. 35 No. 1, and the Variations sérieuses; as well as Liszt’s Prelude and Fugue on BACH, for organ. Franck was able to write long melodies, as revealed in the middle movement of the Prélude, aria et final, or the central Adagio of Chorale No. 3 - two of his loveliest inspirations. But in general his music consists of sequences of short melodic motifs; especially characteristic is the falling phrase of several notes, the first one invariably intensified through length, repetition, or by a liberty indicated by such instructions as a capriccio or con fantasia. Franck’s pupil, the organist and composer Charles Tournemire, described Franck’s rendering of such passages as “free rubato”, and noted that to maintain a metronomic movement would be absolutely contrary to Franck’s intentions. These falling phrases give Franck’s music much of its special quality; they are imploring and supplicatory in piano, and anxious and unsettled in forte. Though his pieces often arrive at the end triumphant or radiantly transfigured (for example, the endings of Prélude, choral et fugue and Prélude, aria et final), their actual course suggests something passionately desired but unattainable. Like Liszt before him, and like Messiaen after him, Franck expressed the rapture of his deep Catholic belief. But, also like them, he found no conflict, no incongruity, between the “certainties” of that faith and the paroxysms of earthly passion.</p>
+  <br><p>Camille Saint-Saëns, in a mood of offended classical punctiliousness, is supposed to have declared of the Prélude, choral et fugue that its chorale was not a chorale, and its fugue not a fugue. Vincent d’Indy would have had us believe that Franck tried consciously and successfully to revive Beethoven’s principles of construction as a solid, serious basis for late 19th century (French) music. D’Indy tells of Franck’s improvisation classes (he himself was a master of improvisation) that the master would sit bored as they went through the motions. If one of them did something subtle and unexpected, he would leap up, crying, “I like it, I like it!” Such anecdotes point to another special quality of Franck’s music - the tug between form and fantasy, a tension between the prescribed and the unexpected. Herein we see again the product of his dual inheritance. The occasional deliberateness of the architecture is redeemed by the brilliance of the ideas, while simultaneously the musical invention is saved from self-indulgence by the coherence of an underlying structural principle. Franck’s predominant structural scheme produces cyclic forms, in which ideas that figure early in a work are brought back later in different emotional or dramatic guises. The four substantial works on this CD (including Chorale No. 3) are like triptychs; with three interlinked, folding panels - each related to and illumined by the others.</p>
+  <br><p>Two of the keyboard works recorded here - Prélude, fugue et variation and Chorale No. 3 - were originally for organ. They are among the finest of Franck’s organ works, and incidentally, they are the most “pianistic”. Indeed, the mythology surrounding Franck places him firmly in the organ loft. But he was a pianist before he was an organist, and at least one witness - the composer Maurice Emmanuel (later a teacher of Messiaen) - declared that Franck was never a supreme organist, and that he was much better as a pianist. Certainly, one can play his organ works with a rudimentary pedal technique; the third chorale, for example, calls for only a small amount of pedalwork. All three chorales were composed on an old piano during a stay in Nemours. Prélude, fugue et variation was not only transcribed for piano by Franck himself, but it seems to have been conceived originally for piano and harmonium. Some of its textures may seem obviously meant for the organ, but perhaps Franck was only exploiting the extraordinary reach of his own hand (a 12th! ). In any case, one can safely say that the transcriptions on this CD represent works that transfer easily from one instrument to the other.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
