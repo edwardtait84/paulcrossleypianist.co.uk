@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+   
+<br><h1>Franz Liszt (1811-1886)</h2>
+<br><p>Although it is with some alarm and despondency that one reads the constantly re-iterated confusions and misconceptions regarding Liszt the man and the artist, there are signs of a genuine re-assessment and revaluation of his music. This is not due to a new vogue for piano pyrotechnics, but because looking back through musical history his importance and position now seem clear and unassailable, and because to generations for whom the Debussyan revolution is simply a fact of life, his peculiar compositional method seems in no way disturbing or disconcerting.</p>
+<br><p>The date of Liszt’s birth makes him a contemporary of Mendelssohn, Chopin and Schumann, but he is not a ‘Romantic’ composer in their sense and his first mature compositions appear virtually only after their deaths. There are few early original pieces and the long process of maturation of the Transcendental Studies or the Harmonies poetiques et religieuses shows the first versions of these pieces to be the merest sketches. Chopin’s extremely acid remarks about Liszt represent a reaction to the part of Liszt’s life that he himself termed the ‘Glanz-Period’; Chopin could have heard none of Liszt’s mature works and indeed could scarcely have considered Liszt as a composer.</p>
+<br><p>The ‘Glanz-Period’, Liszt’s effective performing career, was remarkably brief — his last public concert for money was in 1847, aged thirty-five — but such was its impact that his celebrity was colossal and there are innumerable contemporary references to him, more from this phase of his life than from the whole of the remainder of it. It is an extraordinary and fascinating period, a peculiar mixture of Lisztomania and something more serious. Lisztomania was a phenomenon both cultivated by Liszt himself and manufactured by an adoring society, something both under and outside his control. His posturings were quite conscious: “I have got a tremendous fit of Byron on. Be indulgent and kind as ever!” he wrote to a friend. His concerts offered the conventional virtuoso fare — operatic fantasias, improvisations, and the like — with some Beethoven and Weber, though performed, as he himself admitted, “with a hundred insolent alterations” that would make them more readily acceptable to “a public always slow to apprehend beautiful things in their august simplicity”. In letters dating from a later period we read that “the frequent ill-success of my performances of Schumann’s compositions, both in private circles and in public, disheartened me from keeping them in the programmes of my concerts — programmes which, partly from lack of time and partly from the carelessness and satiety of the ‘Glanz-Period’ ... I seldom . . . planned myself . . . That was a mistake, as I discovered later and deeply regretted . . . however my faint-heartedness may be excused, it was a bad example I set, one for which I can hardly make amends”. He seems not to have played the few early pieces to friends — the Harmonies were not played to Lamartine nor the Hugo song-settings to their author. Yet, even the exclusive coterie of creative artists took Liszt very seriously. Why such people should have been so enraptured by him — apart from by his obviously superlative playing — is possibly explained by a remark of George Eliot’s. Much later in Liszt’s life she visited him in Weimar; in her Leaves from a Notebook she writes; “Then came the thing I had longed for — Liszt’s playing. I sat near him so that I could see his hands and face. For the first time in my life I beheld real inspiration”. The quality of Liszt’s charisma was clearly such that one felt one was witnessing the very act of creation. The fact that he improvised so brilliantly and effectively (even his earliest works have the quality of improvisation) all added to this overwhelming impression.</p>
+<br><p>The ‘Glanz-Period’, for all its vagaries, was, however, no depressing irrelevance in Liszt’s life, but essential to his emergence as a composer. He was perforce a late developer: he had little or no schooling or musical background and, indeed, not until he took up residence in France and mastered its language did he have a means of imposing any sort of intellectual discipline on himself. Moreover, the figures who were to have the greatest influence on him were only bringing their work to fruition during this period. Nevertheless, his genius as a performer gained him admission into an extraordinary circle of artists — writers and painters as well as musicians — many of whom were to affect his imagination.</p>
+<br><p>Inevitably the most important influences were other composers, and predominantly three — Paganini, Chopin and Berlioz. Paganini’s influence has been greatly misrepresented in that it has been said to have operated chiefly on the virtuoso, performing Liszt. The Romantic movement itself was schizophrenic, having not only a sentimental but also a violent phase. One of the earliest textbooks of Romanticism, Burke’s Inquiry into the Origins of the Sublime, had said that art should excite the emotions, and particularly the emotion of fear which was the source of the sublime. Burke’s ‘fear’ became the object of self-conscious relish, and the artist himself a figure of dread and curiosity; such artists as Byron, Gericault, Hugo and, of course, as a performer, Paganini. Certainly this aspect was not lost on the diabolic side of Liszt’s personality. But, and more importantly, it is also likely that Liszt detected in Paganini’s music and performances a possible alliance between poetry and brilliance, which was to be one of his major pre-occupations. That such an alliance was not possible for a composer like Schumann is strikingly demonstrated by his reaction when Liszt played him the B minor Sonata; his icy silence is readily explained by a passage in one of his letters to Clara: “Art, as you practise it, and as I do when I compose at the piano, this tender intimacy I would not give for all his splendour”.</p>
+<br><p>The influence of Chopin was so considerable that it has been suggested that its impact put a virtual embargo on Liszt’s own efforts for many years. I would suggest, rather, that Chopin’s work, particularly his later music, had to be completed before its implications could be fully realised by Liszt. Liszt valued Chopin’s revolutionary genius; he called him “one of those original beings . . . adrift from all bondage”; he singled out his “bold dissonances and strange harmonies” — what conservative musicians like Moscheles called his “hard, inartistic modulations”. Also very important was Chopin’s nationalism — his sophisticated and entirely original incorporation of folk-elements into a personal style. But Liszt must have been most particularly struck by the later, more extended works, such as the Polonaise-Fantaisie, the Fourth Ballade and the Barcarolle, by their architectural quality — the way they maintained romantic freedom within a very tight structure — and by their extraordinary harmonic daring.</p>
+<br><p>Berlioz was perhaps the most important influence of all. His compositions represented the answer to Beethoven’s formalistic development, development from a single musical idea — the idee fixe. This was the basis of Liszt’s process of ‘thematic transformation’ whereby coherence was achieved by ingenious elaboration of one musical gesture. (Actually, this process was already happening, as Liszt would have been well aware, in late Beethoven, in Schubert’s Wanderer-Fantasy, and in Weber’s E minor Piano Sonata.)</p>
+<br><p>Alfred Brendel has suggested that “there is something fragmentary about Liszt’s work; its musical argument, perhaps by its nature, is often not brought to a conclusion.” ‘Argument’ is, of course, a problem for those for whom the German tradition is pre-eminent and exclusive — the same difficulty exists with Liszt as with Debussy. In fact the B minor Sonata has probably more in the way of closely-organised argument than the conglomerate three- or four-movement structure of Beethoven, though, as mentioned earlier, late Beethoven, with its shift of centre-of-gravity away from dominant first movements usually to variation-technique slow movements, was a move in this direction. Works like Benediction de Dieu dans la solitude, Cantique d'Amour, Ricordanza, and Harmonies du soir are, however, works of contemplation rather than argument, static rather than dynamic. The Benediction, one of Liszt’s greatest masterpieces, is an A B A-form work in which the central blessing is framed by outer sections conveying both the contemplation and the after-glow induced by such an event. The static nature of the piece is created by constantly-moving, minutely shifting harmonies wheeling round a basic tonal centre. The style and manner anticipate Albeniz, notably in Almeria and Jerez, and particularly Messiaen (the basic tonality of F sharp major is a startling parallel) in suggesting a timeless ecstasy.</p>
+<br><p>The chordal writing, particularly passage-work in chords, makes this harmonically very dense music. Humphrey Searle, who remarks on “that rather stifling atmosphere which has somehow turned sour most of the set of Harmonies", misses the point entirely. (A similar misrepresentation of Messiaen’s music was made by one commentator who mischievously referred to its ‘brothel lyricism’!) Liszt himself said, “What I attach most importance to is my harmonies; that will be my serious work: I will sacrifice everything to it”. A comparison of earlier and later versions of the same work — such as the single piece called Harmonies poetiques et religieuses and its re-composition as Pensees des Morts, or the two versions of La Vallee d'Obermann — shows the first versions to be interesting but rambling fantasies. What is lacking in the earlier versions is structural awareness and the adequate harmonic language to support a wholly revolutionary concept of composition.</p>
+<br><p>This new musical language is what took so long to evolve. Liszt was neither a bom contrapuntalist nor a born melodist — he was clearly without the exuberant lyrical gifts of a Mendelssohn or particularly a Schumann. One would hardly describe him as a laconic composer and yet the thematic material is often very brief and sketchy. It is arguably as a direct result of this thematic terseness and contrapuntal inadequacy that Liszt emerged as such an original composer. The very awareness of these limitations forced him into new methods of construction and thematic transformation that makes his work anything but fragmentary. The curious, epigrammatic, disembodied quality of his later work is implicit in this earlier thematic reticence. Moreover, the course of his career shows a progressive abandonment of rhetoric and a revolutionary reaction against a tendency towards the gigantic (which, within his own direct experience, might be epitomized as Wagner, the Princess Sayn-Wittgenstein’s Causes interieures — an encyclopaedic set of writings — and his own oratorios, written under the Princess’s encouragement). Seen in these terms his artistic progress would seem to be quite consistent.</p>
+<br><p>This consistent evolution is best seen in the piano music. In the preface to the first St Francis Legend he complains, ironically, of the piano’s lack of colour; his work shows a persistent, and successful, search for new pianistic effects to compensate for this, such that ornamental devices become the very method of composition itself. By comparison his orchestration is usually very ordinary in that it is either dull or garish (the Miracle of the Rose passage in The Legend of St Elizabeth is a notable exception).</p>
+<br><p>In other forms of music — he tried almost everything except opera (unless one considers Don Sanche, written when he was fourteen) — he simply marked out possibilities (considerable ones if one thinks of the invention of the symphonic poem) and then left it to others. He was, however, a conscious experimenter and, as if to make amends for the ‘Glanz-Period’, for ten years turned Weimar into a unique music workshop. His efforts here and his attempt to promote “the music of the future” makes him a sort of Boulez-figure of his time.</p>
+<br><p>Finally, but fundamentally, what of Liszt’s bewildering duality: his life-long vacillation between the spiritual and the secular, the devout and the erotic?</p>
+<br><p>Surely his finest work resolves the issue and presents no incongruity — the division between sacred and profane has ceased to exist. Liszt saw Man’s validity not in conflict with but as a part of Nature. In the Benediction, the blessing of God is most radiantly received not in some state of monastic, cloistered withdrawal, but in the ‘delicious solitude’ so luxuriantly conjured up in Marvell’s The Garden. Certainly his faith was a key factor, informing all his work. His spiritual affirmation and optimism are essential counterweights to the empty rhetoric and Byronic pessimism of his youth. The revision of Harmonies poetiques et religieuses into Pensees des Morts demonstrates not only a technical advance but also a philosophical change from earlier pessimism to a serene conclusion. Spiritual affirmation is also what elevates the rhetoric of the second St Francis Legend above that of, say, Orage or Mazeppa. As with Messiaen, Liszt’s view of religion was pantheist.</p>
+<br><p>In Les Jeux d’Eaux a la Villa d'Este the fountains are given symbolic significance when, over the central section of the score, Liszt quotes from St John’s Gospel “but the water that I shall give him shall be in him a well of water springing up into everlasting life”. In Liszt’s later works optimism gives way to bitterness, disillusionment and resignation; he himself characterised the works of the two stages of his life as products of l'exuberance de coeur’ and ‘I'amertume de coeur'.</p>
+
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
