@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>DEBUSSY: PIANO MUSIC, VOLUME 4</h2>
+  <br><p>This is a CD of delightful pieces. How could one not respond to the charm and freshness of the 2 Arabesques, the iridescent conclusion of the Nocturne, the ebullience of Danse (orchestrated by its admirer, Ravel, in 1922), and is not Clair de lune (the first music I ever responded to, as a 2-year-old child) part of all our musical consciousnesses? And yet, as I sit down to write, I have this image of Debussy leaning over my shoulder and saying, “Look, just call it Jottings from an Apprenticeship, and have done with it!” By any standards the body of Debussy’s ‘mature’ piano music - from Estampes (1903) to the Etudes (1915) - is one of the most staggeringly original creative outbursts in the entire literature, but, before those astonishing 12 years, there were 20 years of sporadic works for the piano. Most of the pieces here were written in the 1880s and sold to publishers to bring in sorely needed funds for their impoverished young composer. In the event they did not appear in print until the years of Debussy’s maturity and he was, to say the least, not best pleased, insisting, even in the case of something as good and as fully achieved as Suite bergamasque, that the actual dates of composition be stated.</p>
+  <br><p>That Debussy was so harsh and dismissive of these early pieces is hardly surprising. By the 1900's, the startling and hitherto unknown poetics of his music had been worked out, but in works like Pelléas et Mélisande, Prélude à l’après-midi d’un faune, Nocturnes, and songs, and not in piano works. Perhaps, also, he worried that these early piano pieces showed, too much, who he had been listening to - the Russians (Tchaikovsky, Balakirev, Borodin); Fauré - less than might be expected, seeing that he was the only French composer of the period producing a significant body of piano music; Grieg - a lot, not least the extraordinary har- monic sleights-of-hand that the Lyric Pieces are full of; Massenet - the cast of certain melodies; Chopin (whom he revered). And in all of this music there is none of the intense concentration of incident, and, certainly, no trace of the superimposition of incidents, the layering of events, that characterize his later piano works, that give them the feel and “look” of an orchestral short score.</p>
+  <br><p>It’s ironic that, of all the pieces on this CD, the so-called Images oubliées escaped publication in Debussy’s lifetime (the manuscript, given away, came into the pianist Alfred Cortot’s private collection, and was finally published in 1978) as they offer more pointers to the future than most. Indeed, the second of them was incorporated, virtually unchanged, as the Sarabande of Pour le piano (which is why it seemed unnecessary to record the early version here). No. 1, a gem (and another Sarabande!), is clearly by the composer of Pelléas; No. 3, a fascinating, if somewhat “unfinished” piece, uses the tune Nous n’irons plus au bois, material which was to play such a large part in Jardins sous la pluie (from Estampes), and Rondes de printemps (from the orchestral Images).</p>
+  <br><p>And so we come to Pour le piano, the one piece on this CD that Debussy was proud to admit to the canon of his works. The title is significant - this was his first acknowledged attempt to make his mark as a serious composer of piano music. Influence is still here - Bach (a favourite of Debussy’s) - echoes of his A minor organ Prelude in the Prélude, and his E major solo violin Prelude in the Toccata, but the real “model” is, surely, César Franck. Debussy greatly admired Franck and I am convinced that Franck’s Prélude, Choral et Fugue and Prélude, Aria et Final not only represented potent models for an extended piano suite, just in terms of form, but, with their peculiar blend of sensuality and innocence, fantasy and rigour, were, also, highly appealing. In any event, “Prelude, Sarabande and Toccata”, which Pour le piano is, is not a million miles away from the Franckian idea! (An editorial footnote: “Le double plus lent” at the end of the Toccata, still printed in some editions of Pour le piano, is not by Debussy, and irritated him immensely!)</p>
+  <br><p>But, by the time Pour le piano was finished, Debussy had, as I have said, found other directions, and, not to be underestimated, there was a new challenge in the incipient genius of Ravel (Jeux d’eau had, by that time, appeared), and its message was not lost on Debussy.</p>
+  <br><p>And if any of this reads like an apology for Debussy’s early piano works, it isn’t meant to - this is music that still speaks to us. Despite its composer’s misgivings, there is, throughout, a search for luminosity and freedom from conventional rhetoric which is refreshing. Even this music which is, largely, the “exterior” of Debussy’s world - its airiness, its feline grace, its mercurialness, its suppleness, its touching beauty, its polished surface on which the light dances - would deserve and compel our attention if nothing else had been written. And even a composer as profoundly original as Debussy, whose poetics represent perhaps the greatest break with tradition ever made, might have been expected, for a while, to enjoy him- self in the early “light” of his world before embarking on his explorations of those moon-lit, half-lit, mysterious inner worlds that are his great contribution to our human awareness. And, though that is the Debussy I love the most, I would not, for one moment, have wanted to miss these opportunities to stand on the threshold with him.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
