@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>Tippett Piano Sonata No. 4</h2>
+  <br><p>I first heard of Tippett’s Fourth Sonata some three years before its composition, whilst he was working on The Mask of Time: his idea at that time was to write a set of bagatelles following the model of Beethoven’s Op 126. Beyond that notion nothing else was formulated; the extended pre-planning stages of works like the operas or the symphonies didn’t happen in the case of the piano solo works; they were much more spontaneously invented at the keyboard (which was where he invented all his real sounds). The only preliminary was a day I spent with him, at his request, talking about the piano and playing various unspecified pieces. With hindsight it is fascinating to see what he used from that session. Technically, we discussed mainly the way composers and, in their turn, pianists had learned how to exploit the increasingly enhanced resonant properties of the concert- grand piano; how, with a virtuoso pedal technique (the modern piano, after all, has three pedals!), it was possible to harness these potentialities to produce the effect not only two hands, but three, or even four, at one keyboard. As an example (clearly a very telling one), I showed him how it was possible for a solo pianist to play the opening of his Fourth Symphony (one of my favourites). Of the various pieces I played and discussed, two seemed to have had a particular effect, both – though I didn’t realise it at that time –concerned with the number five. The first was Ravel’s Miroirs. Michael was especially keen to learn of 20th century models for suites of pieces; I had just completed a recording of all the Ravel piano music and, knowing his longstanding affection for this composer, was eager to share some of my discoveries with him, particularly my theory that Miroirs is not simply a collection of individual pieces, but a carefully integrated five-movement structure, controlled motivically, and very precisely balanced emotionally and dramatically around its middle movement. In my opinion, this set of pieces presents the closest structural comparison with the fourth sonata. Interestingly, Le Tombeau de Couperin also found its way into the Sonata which begins with the prelude and fugue. This, in turn, tempts me to offer one other structural comparison – this time quite unknown consciously or unconsciously to the composer – which is with the second Act of Wozzeck described by Berg as a symphony in five movements, they being: one, sonata movement; two, invention and fugue; three, largo; four, scherzo and three trios; five, finale, introduction and rondo.</p>
+  <br><p>The other piece that intrigued him was, in fact, by me! In 1982 we were celebrating Haydn’s 250th anniversary and I had produced a piece on the name of Haydn (as Ravel, amongst others, had done in the early years of this century), but using only using the pitches given by the equivalent musical notes of the name and their inversion - that is, five pitches in all. Little did I realise what a prodigious demonstration I should be given of what a great composer could do with five pitches!</p>
+  <br><p>Yet, it is a set of five pitches which imparts cohesiveness and unity to the fourth sonata – not as a series that is aurally identifiable at its every appearance but, to use words from the composer’s own brief programme note, as ‘the means for procuring the connections that would make the set (of five movements) into a whole’.</p>
+  <br><p>Dramatically, the five pitches occupy centre stage. At the focus of the sonata, exactly midway through the piece, in a passage marked ‘sudden; strong, hammered’ the five notes –B flat, C, A, C sharp, D – emerge clearly out of spectacularly resonant gestures. The piece revolves around of this section; the composer’s words again: ‘the shape of this third movement is itself, like the shape of the whole sonata, five-part: that is, in formal terms, A, B(1/2), C, B(1/2), A. The speed is generally slow, and in musical consequence the movements on either side, numbers two and four, are faster. This leaves the first movement that acts as a prelude to the whole, and a fifth and last movements that is more contemplative, a theme and four variations, generally slow’.</p>
+  <br><p>Everything that is so vividly highlighted at this focal point – material, resonance, gesture, drama – is there at the start. The first thing you hear is a single loud B flat in the bass whose resonance is then prolonged and expanded through a series of gestures. In live performance you see this being done, dramatically, the right hand crossing over the left to produce the required sound. The prelude begins with five such ‘expansions of resonance’ of the B flat, C, A, C sharp, D set; the middle of the movement presents transpositions of the set underpinning a delicate, shining figuration; and the last part recapitulates the first, adding yet more resonance – resonance on resonance.</p>
+  <br><p>The second movement is a fugue whose subject is, essentially, the dramatic opposition of contrasted dynamics, forte and piano, presented as two notes (or a set of two note phrases): the first short, loud and sharply attacked; the second long, quiet and tender. As the fugue proceeds, entirely in two–part writing (of which Tippett must have been one of the greatest masters since Scarlatti), the short notes are embellished with ever–varied strong, tough gestures, the long ones with crisp, delicate, dancing gestures. At the centre of the movement is a lyrical invention of the most moving simplicity, an echo of the original bagatelle idea, which the composer said had remained as a stylistic influence. (There’s an indelible Tippett fingerprint in the middle of this – two bars of writing in fourths in the key of A flat, a window on to the magical lyrical world of The Midsummer Marriage and the Piano Concerto; this occurs again in the last movement).</p>
+  <br><p>Movement three sets out, in its A B C B A form, three types of passionate rhetoric which might, simplistically, be described as ‘harmonic’, ‘melodic’, ‘rhythmic’, and which in turn, derive from Symphony No. 4, Triple Concerto, and The Mask of Time. The A section uses the opening gestures of Symphony No. 4, but with no attempt to ‘quote’ the orchestral sound. Indeed, there is a completely new sound – the piano ‘attack’ is quite different from that of the orchestral instruments: one is much more aware of the sustained lower resonance than the higher; and there is a much more ‘pianistic’ discharge of energy. Moreover, there are, not unexpectedly, five gestures rather than three, that is, two entirely newly invented ones. The B section, though it recalls a passage in the Triple Concerto (see also the end of act two of The Ice Break), ‘sings’ differently (much more ‘bluesy’!). The C section uses the same rhythmic figure that opens the ‘Dream of the Paradise Garden’ movement of The Mask of Time, though, in point of fact, both derive from Monteverdi’s madrigal, Ecco mormorar l’onde.</p>
+  <br><p>Following the intensity of this central movement, the fourth movement was always intended to be ‘about speed and virtuosity’. Tippett was always fascinated by the whole drama of the solo pianist, including the increasingly breathtaking feats that it is possible to accomplish with ten fingers. He specifically asked me to play works of great technical virtuosity to him, and stood over me and watched as I played. (I’m sure that two of the ‘trio sections’ of this movement, where ravishing left hand tonalities support elaborate double-note decoration in the right hand, were inspired by seeing me play Ravel’s Ondine). The Scherzo material was, again, suggested by something the composer had seen on television, Glenn Gould (I think) playing some Bach and imitating what would have been done originally on a two-manual harpsichord, so that the two hands, with independent figurations, seemed to start at opposite end of the keyboard, come together in the middle, and then cross over, still maintaining their own material. This notion is achieved here in the Fourth Sonata by having the one hand take over the other’s material at the half-way mark, but, aurally the effect remains. There’s another central bagatelle in the movement made out of florid two-part canonic writing (prompted, I should guess, by the guitar writing of ‘Achilles’ Aria’ in act two of King Priam (during the writing of this movement Tippett went to see, and was much taken with, a new production of the opera by Kent Opera).</p>
+  <br><p>The final movement is a theme, four variations, and a re-statement of the theme – seemingly, after the example of the last part of Beethoven’s Op 109. The theme is, again, very ‘bluesy’, though with a wide-ranging tessitura – two-and-a-half octaves! There’s a readily identifiable ‘island of stillness’ in the theme – once again ‘Midsummer Marriage fourths’ embellished with appoggiaturas – and the theme winds down towards a miraculous closing chord, B flat major with an F sharp above it! (One last mention of the five-note series: each movement ends on, or over, one of them – the first on D, the second on C, the third on A, the forth on C sharp, and the last on D flat).The shape of the theme is maintained throughout the variations, which I characterised for myself as follows: Variation 1 is the ‘Corelli Fantasia’ variation; Variation 2 takes up and highlights the ‘appoggiatura’ idea; Variation 3 is like the ‘Hiroshima, mon amour’ movement of The Mask of Time, that is, soprano blues over a humming chorus; Variation 4 is an almost Brahmsian preparation for the transfigured return of the theme. It is no secret that Tippett often had difficulties finishing a work; not so in the case of the Fourth Sonata which has one of the loveliest endings of any of his works. Almost 40 minutes after the opening B flat is sounded one reaches the final miraculous B flat chord. As the composer said to me, describing its invention, ‘the hands just seemed to find their way there’.</p>
+  <br><p>Any discussion of Tippett seems, almost inevitably, to take one back to Beethoven. One can now see how variations comprise the most substantial and lengthy movements of Sonatas 1, 3, and 4, and the final movement of Sonata No. 4 – its lyrical efflorescence, its form (Op 109) – the composer’s original intention was to write a set of bagatelles, all summon up the world of Beethoven. And yet, for me, the shades of two other classical masters loom large over the Fourth Sonata.%22%3A%22http%3A%22%2C%22host%22n – indeed, it seems like the gathering- up of a life time’s lyricism – allied to (permitted by, even) great structural and dramatic control, remind me of the late piano sonatas of Schubert. It seems to me that someone, especially with Tippett’s sense of the archetype, setting out to write his ‘Beethoven Op 126’, was quite consciously bidding his farewell to the piano. One of the reasons the Fourth Sonata is so extended, I reckon, is quite simply that the composer loved the piano that he could hardly pour enough of himself into what was his last work for it. Its composition, I know, was a sheer delight to him; I rarely saw him so obviously enthusiastic about anything – he was even known to have risen from his bed one night to write down a chord that had just come to him! Finally, there’s a strangely poignant feeling to the last movement which reminds me of the late piano works of Brahms. ‘The lullaby of my sorrows’ is how Brahms characterised the first piece of Op 117 – he would have known what Tippett’s ‘blues’ were about.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
