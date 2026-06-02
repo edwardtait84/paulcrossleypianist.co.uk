@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>Grieg Lyric Pieces</h2>
+  <br><p>New Year’s Day 1888, Leipzig, the home of the famous violinist Adolph Brodsky; the occasion, a dinner party in honour of three composers with whose music Brodsky was closely associated - none other than Brahms, Tchaikovsky and Grieg! This marked the beginning of a friendship between Grieg and Tchaikovsky though through their music they already regarded each other as‘kindred spirits’.The same was not true of Brahms and Tchaikovsky who never came to terms with each other’s music - though they had great personal respect for each other. Fortunately, we have several recorded witnesses to this extraordinary event. Everybody spoke fluent German, so that presented no problem. However, Grieg’s wife Nina, who had, most correctly, been placed at the table between Brahms and Tchaikovsky suddenly got up saying:“l can’t do this - I don’t dare to sit between these two”.At which Grieg said:“l DO dare” and swapped places.The lengthiest report of the occasion was that of Tchaikovsky himself in his Diary of a Foreign Journey, 1888 and his remarks about Grieg’s music remain, to this day, one of the most important, astute, and generous estimates of Grieg’s genius.</p>
+  <br><p>Perhaps Grieg is not by any means as great a master as Brahms, the development in his music less elevated, the aspiration and goal less broadly conceived.A subconscious striving toward the unfathomable depths seems to be entirely lacking. Nevertheless, he is closer to us, he seems more approachable and kindred because of his deep humanity. Hearing the music of Grieg, we instinctively recognise that it was written by a man driven by an irresistible longing to give expression by means of sound to a flood of poetic emotion which is no slave to theory or principle, which is stamped with no impress but that of a living sincere artistic feeling. Perfect form, cogency, and faultless logic of thematic development we shall not find in the music of the celebrated Norwegian - although the themes are always fresh and new. On the other hand, what enchantment, what spontaneity and richness in the musical invention! What warmth and passion in his singing phrases, what a fountain of pulsating life in his harmonies, what originality and entrancing distinctiveness in his clever and piquant modulations, and in the rhythm as in everything else - how endlessly interesting new, original! If we add to this that rarest of qualities, a perfect simplicity shorn of all affectation and pretence to something other, it is not surprising that everyone should delight in Grieg.</p>
+  <br><p>Tchaikovsky’s statement pulls no punches as regards Grieg’s limitations - as they would have seemed to a writer of symphonies and operas, a master of the large-scale - and, as they seemed, frustratingly, to Leipzig-trained Grieg himself. But then, he puts his finger on what makes this music special and why we take it to our hearts (as we have continued to do for 150 years): enchantment, spontaneity, originality, harmonic surprise, warmth, passion, distinctiveness and above all genuineness - the music is precisely what it is, no more, no less, there is nothing to “get”. Tchaikovsky would not have given those accolades readily, and when one thinks of the dozens of 19th Century composers who came and vanished, his judgements have stood the test of time. Incidentally, it’s not surprising that Grieg and Tchaikovsky were such mutual admirers for can there ever have been two composers for whom the constant foregrounding and privileging of melody was more marked, and why not when the gift is so prodigious. The most interesting insight (and, is it approbation or criticism?) is what, I think, will lead us to the heart of Grieg’s ‘poetics’ - “a subconscious striving towards the unfathomable depths seems to be entirely lacking”.</p>
+  <br><p>Back to New Year’s Day 1888 and to Grieg himself: he was already the world-renowned composer of the A minor Piano Concerto, the Peer Gynt music, the Holberg Suite, and the Elegiac Melodies; he and Brodsky had, three weeks earlier, premiered the C minor Violin and Piano Sonata (for me - who played it many times with Arthur Grumiaux - his finest chamber work) to huge acclaim; and everybody was raving about the latest Lyric Pieces. Opus 43. And - he had just gone through hell!!</p>
+  <br><p>Everything had been up in the air, his marriage had been on the rocks, his genius (at one point he wrote absolutely nothing for two years), his finances, his not knowing where to settle, his beating himself up about his ‘limitations’ as he saw them - he had needed to come to terms with a lot of “stuff". And he had. Most importantly, he and Nina had realised that whilst they couldn’t live with each other, they also couldn’t live without each other (one has to remember that all his songs - a huge part of his output - were written for her, a very gifted amateur, to sing), so they had sealed the pact by building - together -Troldhaugen (Nina’s name -Troll Hill) just outside Bergen. And that “coming home” finally sealed for Grieg an even greater pact with, as he now forever realised, the only thing that had ever mattered to him: “I have lived at my Troldhaugen throughout the winter and most of the summer including a tour in our Western mountains - where I bathed in the timelessness. Here one stands face to face with greatness; it is Shakespeare, Beethoven and whatever genius you could desire in pure form! I would not swap this for a dozen Gewandhaus concerts!” That seal with the present was also a seal upon the past, and, though I’m not sure Grieg yet saw it, a compact with the future. The wonderful C minor Violin and Piano Sonata was to be the last extended work. Some years before it, he’d written: “... even when I have ideas, there is neither fluency nor form when I try to work out anything further.” Now I think he realised or, at least sensed - and I am certain the huge artistic achievement of the Op. 43 pieces was part of that - that the “idea”, seemingly resistant to all development was the piece. The man who ‘dared’ to sit between Brahms and Tchaikovsky did so, not out of bravado, but with a new self-confidence and a new independence, a real sense that he was moving away from their (and Leipzig’s) orbit. Grieg was not forced into seclusion, into isolation - quite the contrary, he never knew anything other than fame - he chose to be there. The Danish composer Gade - Mendelssohn’s second-in-command at Leipzig - one of Grieg’s earliest mentors, had given him very good advice:“your technique is assured - your poetry is yours to find”.Whilst Grieg was, for a time, happy and successful in the world of Romanticism, the end of the 19th century, the period when almost all the pieces on this CD were written, saw a move: though I always hesitate to use terms from other artistic disciplines when discussing music, the move is from Romanticism to Symbolism (something I’ve written about at length in my essay on Ravel’s Piano Music, (CRD 3383 & 3384).</p>
+  <br><p>The Symbolists thought that “striving” (they used that word a lot) was precisely what impeded access to what Tchaikovsky calls “the unfathomable depths”. The work had to be free of discursive content, argument, development, just artistic vision at its most innate, its most sublime.The great Symbolist poet W. B.Yeats has a marvellous couplet that points me straight to Grieg and, more exceptionally, his universality;“He that sings a lasting song /Thinks in a marrowbone”. As Tchaikovsky says, whilst the music is neither revolutionary nor experimental, it is highly original. The economy of means is very striking; an extraordinarily stripped-down style and concentration: an idea is often repeated the moment it is stated (something very much not lost on Debussy!); forms are extremely simplified - a single section, song or dance, or ABA, often song-dance-song,or dance-song-dance, although always exactly ordered and with great technical accomplishment.The simplicity, the precision, is a distillation of childlike perception (something he never lost from his intuition of what Schumann was all about) and the control of the abstract and general that came with maturity. Like the Symbolists’ spiritual godfather William Blake, these are Songs of Innocence and Experience.</p>
+  <br><p>So much of it is a poetry of solitude - Einsamer Wanderer, Hirtenknabe, Heimweh, Abend im Hochgebirge, Waldesstille. Once again, in 1888, Grieg wrote: "... my western mountains draw me continually back with an irresistible force. It is as though they still have so much to tell me”. I’ve made two extended trips to the Westland of Norway since making this CD. When you go there, ‘einsam’ takes on a entirely new meaning; the monumental immensity - grand, sublime, austere, unreachable - is reflected, turned inwards, the outer space, in its vastness, reflected into a deep inner space. It is as if no-one else is there. It could be frightening, but it isn’t because you feel instinctively that you are part of it - a profound “belonging” that is very intense and very moving. John Constable wrote: “I paint my own places best”. For Grieg, the Westland of Norway conferred a kind of benediction that “Leipzig” had somehow withheld - and, confirmed a trajectory. He’d never intended to write other than his first book of Lyric Pieces - Lyrical Miniatures as he had, then, called them. If it hadn’t been for the insistence of Peters Edition (Leipzig!!) who knew that his fame was as much, if not more so, in the drawing-room as the concert hall, would he have continued? As it was, between 1884 and 1901 he wrote no fewer than 58 more - almost 3 hours of music.</p>
+  <br><p>The most famous is, I suppose. Wedding Day at Troldhaugen, and yet, in its length, its passages of almost concerto-like rhetoric, it is an exception.The ABA form here is, in one sense, “public - private - public”. Its original title (like Debussy, Grieg hit upon his titles only after the piece was written) was The Well-wishers are Coming, and it is, almost certainly, a reminiscence of his silver wedding celebrations at Troldhaugen in 1892. The well-wishers, with great liveliness and ceremony, make their way; the central section is a love-duet, but poco tranquillo, calm, comfortable, passion as tenderness - but deeply felt; then the well-wishers make their farewells. And it’s a watershed; there is something valedictory about the later pieces. Perhaps Im Balladenton - its hymn-like quality, its imploring sadness - points the way.There’s a distinct tone in these pieces of - not melancholy, not nostalgia - but a kind of elegiac sadness, a sense of the passing of time, perhaps of an old order yielding to a new. You only have to compare Berceuse with Wiegenlied, or Einsamer Wanderer with Abend im Hochgebirge to hear the difference. But, before the final two pieces on this disc, he still has a trick or two up his sleeve. I suggested earlier that there was nothing revolutionary about Grieg’s music which, in terms of a system or method is true, but, as my own teacher Olivier Messiaen, a great admirer of Grieg, pointed out, there are composers who ‘shoot arrows into the future’. Kobold is scarcely a million miles from the Prokofiev of Suggestion Diabolique, nor are others of the Lyric Pieces far from Visions Fugitives or even Romeo and Juliet. Who didn’t learn, and quickly?! Scriabin, Rachmaninov (just listen to him playing the opening of the 2nd movement of the C Minor Violin and Piano Sonata), Delius, Mompou, Poulenc and Gershwin, not to mention Richard Rodgers and Jerome Kern, and of course Ravel, who is on record as saying that he never wrote a single work that was not influenced by Grieg and, above all, Debussy. His often-quoted snide comments about Grieg (shameful, considering his incalculable debt) were but an over-reaction to Grieg’s justifiable outrage at the Dreyfus case. Debussy, happily, had time to repent and surely, whatever else it is, Children’s Corner, coming immediately upon Grieg’s death, is a profound homage (The Little Shepherd is a ‘Grieg Lyric Piece’ - but then so also are several of the Preludes, and as for the opening of his last work the Violin and Piano Sonata, it’s not possible he didn’t know the opening of Waldesstille).</p>
+  <br><p>In the last pieces on this disc, the fading of the vision is unbelievably poignant.There’s a letter in which Grieg laments that“... the mountains have nothing more to tell me”.The series of Lyric Pieces began with a song (Arietta) and dance (Waltz), Waldesstille (song) and Nachklange (dance) are - what? - resignation, relinquishment, but is the singing and dancing over? Waldesstille is somehow a resumé of all he has loved, all the songs he has written - passionate, rich, but the thread of the song is, quite literally, broken; and Nachklänge - the German and Norwegian titles do it much better than the English, ‘echoes’, ‘after-sounds’, ‘sounds that die away’ - both pieces dissolve into a hereafter of loss, remembrance, and regret in a way that only a master could have achieved.</p>
+  <br><p>The end of Arietta suggested so much that needed - yet - to be sung; Nachklänge could not have been composed unless Grieg intended the Lyric Pieces to be considered as a whole - a marvellous journey, a diary, an autobiography in a way. I am one with Tchaikovsky in my admiration. At their best the Lyric Pieces are manifestations of a deep humanity, glimpses of a timelessness that compel attention - by any reckoning “lasting songs”.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
