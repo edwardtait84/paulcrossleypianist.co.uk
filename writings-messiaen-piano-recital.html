@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+   
+<br><h1>MESSIAEN PIANO RECITAL</h2>
+
+<br><p>Although a contemporary opinion of Messiaen is necessarily a limited one, he seems assured of a place as one of the most important composers of this century. His famous analysis and composition classes at the Paris Conservatoire, attended at some time or other by most avant-garde composers (Stockhausen and Boulez are notable examples), have made him a potent influence far beyond his actual music which, though revolutionary, remains inimitable.</p>
+<br><p>Olivier Messiaen was born in Avignon on 10th December, 1908, the son of Pierre Messiaen, a professor of English, and the poetess Cécile Sauvage. The influence of his mother seems to have been predominant: he says of her that she “raised me in a climate of poetry and fairy-story which, independent of my musical vocation, was the origin of all I have since done. Indeed, such a climate develops a child’s imagination enormously and leads him towards abstract expression which finds its real outlet in music, the most abstract of all the arts.”</p>
+<br><p>The piano was his first instrument and remains his favourite, though he has been a professional organist since the age of 22. Not only has he written a vast amount for solo piano but the piano occupies a prominent place in almost all his major orchestral works. He lists the composers who have influenced his piano writing as Rameau, Scarlatti, Chopin, Debussy, Ravel (especially Gaspard de la nuit) and, perhaps above all, the Albeniz of Iberia. Indeed Lavapies from Iberia actually sounds like the closest precursor of Messiaen’s piano writing. The very method of composition with its emphasis on elaborate decoration and or-namentation is remarkably close. (It is odd that Messiaen does not mention Liszt, a composer with whom, both technically and religiously, he would seem to have much in common.)</p>
+<br><p>Several characteristics of his piano music stand out. Most noticeable is passage-work composed of groups of chords which stems from his imitation of the use of mixture-stops on the organ, though, unlike the chords produced by mixtures, Messiaen’s are asymmetrical. Another feature is the constant use of extreme ends of the keyboard (the passage towards the end of Regard de l'Esprit de Joie is a striking example of this). In the Catalogue d’Oiseaux there are many innovations because the reproduction of the timbre of the various bird-songs has necessitated constant invention of chords, sonorities and complexes of sounds.</p>
+<br><p>Messiaen has written extensively on his own works and the following are excerpts from some of his notes. In the case of La Bouscarle the whole scenario which prefaces the score of the work is quoted.</p>
+<br><p>Préludes</p>
+<br><p>V. — Les sons impalpables du rêve . . .</p>
+<br><p>(The impalpable sounds of the dream)</p>
+<br><p>VI. — Cloches d'angoisse et larmes d'adieu</p>
+<br><p>(Bells of anguish and tears of farewell)</p>
+<br><p>“The Préludes were written in 1928-29, I was then 20. I had not yet embarked upon the rhythmic researches which would transform my life. I passionately loved the birds without knowing how to notate their songs. But I was already a musician of sound-colour. By means of harmonic modes, transposable only a certain number of times, and drawing on the fact of their particular colourings, I was able to contrast discs of colour, to interweave rainbows, to find in music complementary colours’. The titles of the Préludes hide studies in colour. And the sad tale indicated by the 6th Prélude ‘Cloches d’angoisse et larmes d’adieu’ is shrouded in sumptuous violet, orange and purple draperies.”</p>
+<br><p>Rondeau</p>
+<br><p>“This short piece was written in 1943 as a test piece for a competition at the Paris Conservatoire. ”</p>
+<br><p>La Bouscarle (Cetti’s Warbler —No. IX from Catalogue d’Oiseaux).</p>
+<br><p>“The last days of April, Saint-Brice, the Trache, Bourg-Charente, the banks of the Charente, and the banks of the Charenton (a small tributary). The green water reflects the willows and poplars. Suddenly a voice bursts forth violently in the reeds or in the brambles; it is Cetti’s Warbler, small, impassioned and invisible. The Moorhen cackles. On a level with the water, a blue-green arrow flashes; the Kingfisher passes, with a few shrill cries, and colours the landscape. The river is calm. It is a beautiful morning of light and shade. The Blackbird whistles, the Song-Thrush joins his rhythmic incantations with the pearly cascades of the Robin, articulations and tremolos of the little Wren. The clear and flute-like refrain of the Blackcap, anapaest of the Hoopoe, haloed attacks (like a mixture of harpsichord and gong) distant and lunary notes, incisive phrases of the Nightingale. What is the strange noise? A saw, a scythe being sharpened, the scraping of a gourd? It is the Com Crake repeating his Iambic rhythm in the tall grass of the meadow.</p>
+<br><p>. . . Here also the victorious strophe of the Chaffinch and the extremely shrill whistles of the Sand Martin. With ash-blue head and yellow breast like a golden button, the Yellow Wagtail walks elegantly along the river bank. Nuptial flight of the Kingfisher, who wheels around, exposing to the sun his beautiful colours of myosotis, sapphire and emerald. A silence . . . brutal punctuation of the morning: Cetti’s Warbler explodes one last time!”</p>
+<br><p>Vingt Regards sur l’Enfant-Jésus (20 Contemplations of the Infant Jesus)</p>
+<br><p>“Meditation on the Infant God in the crib, and the contemplations of those who look on him: from the inexpressible contemplation of God the Father to the multiform contemplation of the Church of Love, moving through the ineffable contemplation of the Spirit of joy, the tender contemplation of the Virgin, then of the Angels, the Magi and the non-substantial or symbolic creations (Time, the Heights of contemplation, Silence, the Star, the Cross).</p>
+<br><p>“The same theme represents both the Star and the Cross, because these two respectively open and close the period of time that Jesus spent on earth. The theme of God appears clearly in the contemplations ‘of the Father’, ‘of the Son’, ‘of the Spirit of joy’, in ‘by Him were all things made’, in ‘the kiss of the Infant Jesus’; it occurs in the ‘first communion of the Virgin’ (she was carrying Jesus inside her), it is glorified in ‘the Church of love’, which is the body of Christ. Not to mention the bird-songs, chimes of bells, spirals, stalactites, galaxies, photons, and the writings of Dom Columba Marmion, St. Thomas, St. John of the Cross, St. Theresa of Lisieux, the Evangelists and the Missal, which have all influenced me. A theme of chords passes from one piece to another, broken up or concentrated in a rainbow; see also rhythmic canons, polymodalities, nonretrograde rhythms amplified both ways, passages which are progressively speeded up or slowed down, asymmetrical expansion, changes of register, etc. The piano writing is very elaborate: inverted arpeggios, resonating overtones, varied runs. Dom Columba Marmion (le Christ dans ses Mystères) and after him Maurice Toesca (les Douze Regards) spoke of the contemplations of the shepherds, the angels, the Virgin and the Heavenly Father; I have taken the same idea and treated it in a different way, adding sixteen more facets of contemplation. More than in any of my previous works, I have sought here a language of mystical love, at once diversified, powerful and tender, sometimes harsh, in multicoloured arrangements.”</p>
+<br><p>XI. — Première communion de la Vièrge (First communion of the Virgin)</p>
+<br><p>“A picture in which the Virgin is portrayed on her knees, bowed down in the night —a halo of light hangs over her womb. With closed eyes she worships the child hidden inside her. This takes place between the Annunciation and the Nativity: it is the first and greatest of all communions.</p>
+<br><p>“Theme of God, gentle spirals descending as stalactites, ending in an inner embrace. Evocation of the theme of ‘the Virgin and Child’ from my Nativity. A more fervent Magnificat. Appropriate chords: two alternating series of note-values, each increasing by one semiquaver, in each bar: the low-pitched beats represent the beating of the Infant’s heart in his mother’s womb. The Theme of God, dying away.</p>
+<br><p>“After the Annunciation, Mary worships Jesus within her . . . my God, my son, my Magnificat! —my love without the sound of words ...”</p>
+<br><p>XIII. –Noel (Christmas)</p>
+<br><p>“Chime of bells —The Christmas bells repeat with us the sweet names of Jesus, Mary, Joseph ...”</p>
+<br><p>XVII. — Regard du Silence (Contemplation of Silence)</p>
+<br><p>“The silence of God made palpable, heaven’s rainbow descended to earth . . . each silence from the crib reveals music and colours which are the mysteries of Jesus Christ . . “Polymodality, canon made rhythmic by the use of dotted notes, appropriate chords, theme of chords. The whole piece is a highly embellished example of piano writing. End: alternating chords, the music multicoloured, insubstantial, like confetti, delicate jewels, interplay of light and colour. ”</p>
+<br><p>X. — Regard de l’Esprit de Joie (Contemplation of the Spirit of Joy)</p>
+<br><p>“Forceful dance, an ecstatic flourish of rejoicing, the rapture of the Holy Spirit . . . the joy of God’s love, blessed in the soul of Jesus Christ . . .</p>
+<br><p>“I have always been struck by the fact that God is happy—and that this inexpressible, un-ceasing joy inhabited the soul of Christ. Joy is for me an ecstasy, an intoxication, in the sense of holy madness conveyed by these words.</p>
+<br><p>“Form: “Oriental dance, very low-pitched, in neumes of unequal length, like plain-chant. First development of the theme of joy. Asymmetrical expansion. A kind of hunting tune in 3 variations. Second development of the theme of joy and the theme of God. Reprise of the oriental dance, at the extreme ends of the keyboard. Coda, theme of joy. ”</p>
+<br><p>Messiaen’s music has been subjected to much incomprehension and derision, more, I suspect, from what he has said and written about it, than from the actual sounds themselves. It is therefore, I think, necessary to point out that bird song, religiosity, rhythmic con-catenations, modes and sound-colour correspondances are more for Messiaen himself to contemplate than for us. An artist creates his own intellectual climate in which to work and therefore is inclined to attach perhaps more importance to it than he should. Messiaen’s avowed aim in his work is to manifest the truths of the Catholic faith, but appreciation of his music should not be blunted or clouded for those for whom these truths are unacceptable. What one does recognise and feel is the burning sincerity and commitment of Messiaen’s affirmation of something spiritual which he chooses to express in these particular metaphors. Matthew Arnold suggested that the ‘facts’ of religion would be replaced by its poetry and indeed a ‘poetry of religious emotion’ is strongly present in Messiaen’s music.</p>
+<br><p>Similarly bird-song should be thought of as an image of the new style that Messiaen evolved in the early fifties. Around this time he had probably realised that the opulence of works like the Vingt Regards sur l’Enfant-Jésus or the Turangalîla—Symphonie was as far as he could go in that direction; also there may have been a backlash from his pupils and their styles (it should not be forgotten that Messiaen’s Modes de valeurs et d’intensités written in 1949 was the first piece in which every single parameter was serially organised). Whatever the reasons, the ‘natural’ fragmentation of bird-song provided him with ideal material for a new style. He himself is the first to admit that, though he tries to notate the bird songs accurately, he introduced something of his own style in the process. Also, in reproducing the timbre of bird-song he clothes single notes with invented chords which is an entirely imaginative process. In a piece like La Bouscarle Messiaen’s own formal procedure is to reproduce in a condensed form the passage of the hours of the day by means of musical representation of the sights and sounds around him. In actual terms this consists of accumulating blocks of material where the formal unity of the piece comes from a balance of similarities and contrasts. As such the piece operates in exactly the same way as, say, the Second Piano Sonata of Michael Tippett.</p>
+<br><p>The important thing to remember is that all these ideas and techniques are used, as they should be, for expressive purpose. In this modern age Messiaen appears as a romantic figure and as such his music presents us with an extraordinary fusion of contrasts —a peculiar blend of refinement and sentimentality, religion and eroticism, the use of sophisticated revolutionary techniques in the hands of a conservative, Catholic voluptuary.</p>
+
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
