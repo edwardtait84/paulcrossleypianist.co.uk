@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Crossley - Concert Pianist</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Site Title */
+    .site-title {
+        background: #444;
+        color: #fff;
+        font-size: 32px;
+        padding: 20px 30px;
+        text-align: left;
+    }
+
+    /* Navigation */
+    nav {
+        background: #000;
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Dropdown Menus */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #000;
+        z-index: 1000;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        width: 100%;
+        padding: 12px 16px;
+        white-space: nowrap;
+    }
+
+    /* Desktop Hover Dropdowns */
+    @media (min-width: 769px) {
+        .dropdown:hover > .submenu {
+            display: block;
+        }
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: none;
+        background: #000;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        background: #111;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        width: 100%;
+        height: 650px;
+        background-image: url('unnamed.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Footer */
+    .footer {
+        background: #444;
+        color: #fff;
+        padding: 20px 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-left {
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-right a {
+        color: #4da3ff;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+
+        .menu-toggle {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav a {
+            width: 100%;
+            border-top: 1px solid #222;
+        }
+
+        .submenu {
+            position: static;
+            min-width: 100%;
+            background: #111;
+        }
+
+        .submenu a {
+            padding-left: 40px;
+        }
+
+        .hero-image {
+            height: 250px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-title">
+        Paul Crossley
+    </div>
+
+    <nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Home</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Bio</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Recordings</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Live Performances</a>
+            </li>
+
+            <!-- Photographs Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Photographs ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Concert Portraits
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Live Recitals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Behind the Scenes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Press Images
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Videos</a>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">
+                    60th Birthday Recital
+                </a>
+            </li>
+
+            <!-- Writings Dropdown -->
+            <li class="dropdown">
+                <a href="https://paulcrossleypianist.co.uk">Writings ▼</a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Articles
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Programme Notes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Essays
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://paulcrossleypianist.co.uk">
+                            Interviews
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://paulcrossleypianist.co.uk">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div style="padding: 20px 30px;">
+  <br><h1>RAVEL</h2>
+  <br><p>These performances are my second recorded version of the piano music of Ravel and I have been asked to provide some background information on the thinking and feeling that may have shaped them. In the thirteen years that separate the two versions I have played the works many times in concert in addition to making a lengthy television film about the composer. However, before any of the insights which this close experience with the music has given comes the text. Obviously I have been used to playing the music from memory but to prepare these new versions I returned not only to the text but to a new text: a new, scholarly, critical edition of the works, published by Peters Edition and edited by Roger Nichols. There were many revelations and but a few examples must suffice to do justice to them all. The notes themselves: particular instances might be the unvarying rhythmic pattern of the figuration at the start of Ondine, or the correction of a notorious wrong note near the end of Jeux d’eau (which permits one to direct one’s interpretation towards a particularly beautiful cadential close); the fact that Ravel never once prescribed a specific metronome mark for any of his piano works, which allows one new freedom and bestows new responsibility in equal measure; and, following on from that, the revelation that Alborada del gracioso is, in fact, in the form of a seguidilla with copla (so, I have played this piece in the tempo of a seguidilla – a comparison with Falla’s Dance of the Neighbours from The Three-Cornered Hat, also a seguidilla would show what I mean).</p>
+  <br><p>But beyond the notes comes the music. If one looks at the entire oeuvre of Ravel one sees that it is a world with two suns – a radiant green-golden sun and a dark companion. The works separate into two different categories which might be characterised as Light / Dark, Innocence / Experience, Paradise / Inferno, Classical poise / Romantic agony, the beautiful and the damned, all appropriate but limited and limiting. What is really fascinating is his absolute need to hold both sides in equilibrium so that he almost invariably had two works on the go at the same time. The parallel composition of the two Piano Concertos is a well-documented instance. But, also composed together were Sonatine and Miroirs such that to the Mozartian innocence of the opening of Sonatine is opposed, for example, the turbulent Une barque sur l’océan – a Romantic ‘bateau ivre’ symbolising dangerous undercurrents of passion. Also Ma Mère l’Oye and Gaspard de la nuit, the one ending with The Magic Garden that in Ravel must constantly be re-created, but, alongside that image of bliss and its ultra-simplicity lurks the fiendishly virtuoso, dark satanic world of Gaspard de la nuit, a nickname for the Devil himself – Ondine, the siren, beguiling, luring people to her passionate depths; Le Gibet, hallucinatory vision of the gallows at sunset; Scarbo, the evil hobgoblin. Like all of us, Ravel had the devil in the flesh! Even Le Tombeau de Couperin had an ‘invisible companion’ – projected but never finally realised – it was to have been called Nuit Romantique described, by Ravel, as “full of spleen, with a hunt in hell, an accursed nun, etc.”</p>
+  <br><p>Always, these two extremes and what holds them together is that they are all idealised worlds, worlds of dreams, secret theatres of the imagination. Ravel is, I think, like Mozart in that he had a basically dramatic cast of mind – all his orchestral works, incidentally, except Rapsodie Espagnole, are for the theatre. But, even when there are not actual programmes, I believe all his works have secret, implied, scenarios. The key to his dramatic strategy is, for me, suggested by his orchestral song cycle Shéhérazade. The first song, Asie – Asia, is a paradigm for his work – a fabulous voyage of the imagination that takes us to unknown realms without leaving a room. Each section of the song opens with the words “Je voudrais”- “I would like”; a catalogue, a procession of desires, and, in many ways, that is the ‘form’ of all Ravel’s works: a catalogue of desires, everything held together as a series of “I would like…”. Ravel’s great task was to turn that ‘conditional’ “I would like” into music that offers without condition (which accounts, for me, for its extreme sensuality). So there was always the constant requirement to find the ‘perfect’ musical object to embody these ideal desires. He struggled long and hard, looking everywhere for these musical emblems of desire. He made no bones about the fact that his aim was ‘technical perfection’, that in his works ‘no detail had been left to chance’. The coolness of perfection and calculation is a criticism that has often been levelled at Ravel, but his great friend and pupil Roland–Manuel suggests how he escapes that censure. “Ravel did not speculate about sentiment; he worked out the sensation he wanted; but at the last extreme of tension and calculation some enchantment is set free which he did not invoke, and which the strictest attention to method would have been incapable of producing”. What is that extreme quality? In musical terms Ravel gives the key. During his final illness he was taken on a trip to North Africa and entertained by the ruler of Marrakesh with a banquet and a fantastic display of music and dancing. When it was suggested that this might inspire him, he said: “if I were to write something Arab, it would be much more Arab than all this”. From wherever he sought his inspiration that “much more than…” quality is the universal, transcendent quality of Ravel’s music. And, what is the extreme quality of feeling in Ravel’s music, the enchantment? Again, one must go back to the Shéhérazade cycle, to the last song L’Indifférent. The focus of desire, of longing, in this song is one who stands forever just out of reach, on the threshold, indifferent to all advances, unattainable, idealised by distance –but the music reaches out with infinite longing. It has been there in Western culture as long as music has existed; it is the theme of the troubadours - love songs sung by the ardent lover to the idealised recipient. Whatever Ravel’s secret theatres might be, the main character in them is himself: this is the voice of one dramatising his desires. He is both observed and observer, puppet and puppeteer, passionately involved and coolly detached, raw and uncontrolled in feeling, superbly in control as manipulator. And that is what he demands of his interpreters in some of the, intentionally, most virtuoso music ever written.</p>
+</div>
+   
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <div>
+                © 2015 Paul Crossley - Concert Pianist |
+            </div>
+
+            <div>
+                02087694471 | London
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            Website designed by
+
+            <a href="https://www.bonline.com" target="_blank">
+                bOnline
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Main hamburger menu
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            if (window.innerWidth <= 768) {
+
+                const submenu = this.nextElementSibling;
+
+                if (submenu &&
+                    submenu.classList.contains('submenu')) {
+
+                    e.preventDefault();
+
+                    submenu.style.display =
+                        submenu.style.display === 'block'
+                        ? 'none'
+                        : 'block';
+                }
+            }
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
