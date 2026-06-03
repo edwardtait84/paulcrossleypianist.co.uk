@@ -194,7 +194,49 @@
             text-align: left;
         }
 
-/* ========================== POSTER SECTION ========================== */ .poster-section { display: flex; justify-content: center; gap: 50px; padding: 50px 30px; } .poster-card { width: 28%; } .poster-image { width: 100%; display: block; cursor: pointer; transition: transform 0.3s ease; } .poster-image:hover { transform: scale(1.02); } .poster-text { margin-top: 20px; } .poster-text h2 { font-size: 28px; font-weight: normal; margin-bottom: 12px; } .poster-text p { font-size: 18px; line-height: 1.7; } /* Tablet */ @media (max-width: 1000px) { .poster-card { width: 40%; } } /* Phone */ @media (max-width: 768px) { .poster-section { flex-direction: column; align-items: center; } .poster-card { width: 85%; } } /* ========================== LIGHTBOX ========================== */ #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; justify-content: center; align-items: center; } #lightbox-image { max-width: 90%; max-height: 90%; object-fit: contain; } #close-lightbox { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; cursor: pointer; }
+/* ========================== POSTER SECTION ========================== */ 
+      
+      
+   .poster-section {
+    display: flex;
+    justify-content: center;   /* centres the pair horizontally */
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 30px;
+}
+
+.poster-card {
+    width: 28%;
+    text-align: center;        /* centres headings and text */
+}   
+      
+      .poster-image {
+    width: 100%;
+    display: block;
+    margin: 0 auto;            /* centres the image */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.poster-image:hover {
+    transform: scale(1.02);
+}
+      
+      
+      .poster-text { margin-top: 20px; } .poster-text h2 { font-size: 28px; font-weight: normal; margin-bottom: 12px; } .poster-text p { font-size: 18px; line-height: 1.7; } /* Tablet */ @media (max-width: 1000px) { .poster-card { width: 40%; } } /* Phone */ @media (max-width: 768px) { .poster-section { flex-direction: column; align-items: center; } .poster-card { width: 85%; } } /* ========================== LIGHTBOX ========================== */ #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; justify-content: center; align-items: center; } #lightbox-image { max-width: 90%; max-height: 90%; object-fit: contain; } #close-lightbox { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; cursor: pointer; }
+
+      @media (max-width: 768px) {
+
+    .poster-section {
+        flex-direction: column;
+        align-items: center;   /* centres stacked posters */
+    }
+
+    .poster-card {
+        width: 85%;
+    }
+
+}
 
 
       
