@@ -197,25 +197,23 @@
 /* ========================== POSTER SECTION ========================== */ 
       
       
-   .poster-section {
+.poster-section {
     display: flex;
-    justify-content: center;   /* centres the pair horizontally */
-    align-items: flex-start;
+    justify-content: center;
     gap: 50px;
     padding: 50px 30px;
 }
 
 .poster-card {
-    width: 28%;
-    text-align: center;        /* centres headings and text */
-}   
-      
-      .poster-image {
+    text-align: center;
+}
+
+.poster-image {
     width: 100%;
+    max-width: 350px;    /* prevents giant posters */
+    height: auto;
     display: block;
-    margin: 0 auto;            /* centres the image */
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    margin: 0 auto;
 }
 
 .poster-image:hover {
