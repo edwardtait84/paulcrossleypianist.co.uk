@@ -206,22 +206,19 @@
 
 .poster-card {
     text-align: center;
-}
-
-.poster-image {
-    width: 100%;
-    max-width: 350px;    /* prevents giant posters */
-    height: auto;
+    width: 150px;      /* fixed size on normal screens */
+    max-width: 50%;   /* shrink when container becomes smaller */
+    height: auto;      /* preserve aspect ratio */
     display: block;
     margin: 0 auto;
 }
 
-.poster-image:hover {
+.poster-card:hover {
     transform: scale(1.02);
 }
       
       
-      .poster-text { margin-top: 20px; } .poster-text h2 { font-size: 28px; font-weight: normal; margin-bottom: 12px; } .poster-text p { font-size: 18px; line-height: 1.7; } /* Tablet */ @media (max-width: 1000px) { .poster-card { width: 40%; } } /* Phone */ @media (max-width: 768px) { .poster-section { flex-direction: column; align-items: center; } .poster-card { width: 85%; } } /* ========================== LIGHTBOX ========================== */ #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; justify-content: center; align-items: center; } #lightbox-image { max-width: 90%; max-height: 90%; object-fit: contain; } #close-lightbox { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; cursor: pointer; }
+.poster-text { margin-top: 20px; } .poster-text h2 { font-size: 28px; font-weight: normal; margin-bottom: 12px; } .poster-text p { font-size: 18px; line-height: 1.7; } /* Tablet */ @media (max-width: 1000px) { .poster-card { width: 40%; } } /* Phone */ @media (max-width: 768px) { .poster-section { flex-direction: column; align-items: center; } .poster-card { width: 85%; } } /* ========================== LIGHTBOX ========================== */ #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; justify-content: center; align-items: center; } #lightbox-image { max-width: 90%; max-height: 90%; object-fit: contain; } #close-lightbox { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; cursor: pointer; }
 
 }
 
@@ -397,16 +394,17 @@
 </header>
 
 <section class="poster-section">
-  <h1>60th Birthday Recital</h1>
+  <br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h1>60th Birthday Recital</h1>
   <br><br><br><br>
   <div style="padding: 20px 30px;" class="poster-card">
-    <img src="60th Birthday Leaflet Front.jpg" alt="60th Birthday Recital" class="poster-image">
+    <img style="width" src="60th Birthday Leaflet Front.jpg" alt="60th Birthday Recital" class="poster-card">
     <div class="poster-text">
       <h2>60th Birthday Concert Leaflet</h2>
     </div>
   </div>
   <div style="padding: 20px 30px;" class="poster-card">
-    <img src="60th Birthday Programme Inside Left.jpg" alt="Festival Appearance" class="poster-image">
+    <img src="60th Birthday Programme Inside Left.jpg" alt="Festival Appearance" class="poster-card">
     <div class="poster-text">
       <h2>60th Birthday Concert Programme</h2>
     </div>
