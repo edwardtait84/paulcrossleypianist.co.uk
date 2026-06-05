@@ -188,6 +188,67 @@
             text-align: left;
         }
     }
+
+   /* ==========================
+   CONTACT FORM
+   ========================== */
+
+.contact-section {
+    padding: 50px 30px;
+}
+
+.contact-box {
+    background: white;
+    color: black;
+    max-width: 700px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.contact-box label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    border: 1px solid #999;
+}
+
+.contact-box textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.contact-box button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact-box button:hover {
+    background: #333;
+}
+
+
+   
 </style>
 </head>
 
@@ -356,9 +417,36 @@
     </nav>
 </header>
 
-<div style="padding: 20px 30px;">
-  <h1>Contact Me</h1>
-  <p>Email: paul@paulcrossleypianist.com</p>
+<div style="padding: 50px 70px;">
+<section class="contact-section">
+
+    <div class="contact-box">
+
+        <form>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <div class="button-row">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
 </div>
    
 <!-- Footer -->
